@@ -301,7 +301,7 @@ class Field extends Text
             case 'NoTrailingPeriod': return '\\n';
             case 'IncludeAboveOrBelow': return '\\p';
             case 'InsertParagraphNumberRelativeContext': return '\\r';
-            case 'SuppressNonDelimeterNonNumericalText': return '\\t';
+            case 'SuppressNonDelimiterNonNumericalText': return '\\t';
             case 'InsertParagraphNumberFullContext': return '\\w';
             default: return '';
         }
