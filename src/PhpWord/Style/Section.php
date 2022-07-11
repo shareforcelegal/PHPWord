@@ -15,10 +15,10 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Style;
+namespace Shareforce\PhpWord\Style;
 
-use PhpOffice\PhpWord\Settings;
-use PhpOffice\PhpWord\SimpleType\VerticalJc;
+use Shareforce\PhpWord\Settings;
+use Shareforce\PhpWord\SimpleType\VerticalJc;
 
 /**
  * Section settings
@@ -58,7 +58,7 @@ class Section extends Border
     /**
      * Paper size
      *
-     * @var \PhpOffice\PhpWord\Style\Paper
+     * @var \Shareforce\PhpWord\Style\Paper
      */
     private $paper;
 
@@ -164,14 +164,14 @@ class Section extends Border
     /**
      * Line numbering
      *
-     * @var \PhpOffice\PhpWord\Style\LineNumbering
+     * @var \Shareforce\PhpWord\Style\LineNumbering
      * @see  http://www.schemacentral.com/sc/ooxml/e-w_lnNumType-1.html
      */
     private $lineNumbering;
 
     /**
      * Vertical Text Alignment on Page
-     * One of \PhpOffice\PhpWord\SimpleType\VerticalJc
+     * One of \Shareforce\PhpWord\SimpleType\VerticalJc
      *
      * @var string
      */
@@ -301,7 +301,7 @@ class Section extends Border
     /**
      * @param int|float|null $value
      *
-     * @return \PhpOffice\PhpWord\Style\Section
+     * @return \Shareforce\PhpWord\Style\Section
      *
      * @since 0.12.0
      */
@@ -327,7 +327,7 @@ class Section extends Border
     /**
      * @param int|float|null $value
      *
-     * @return \PhpOffice\PhpWord\Style\Section
+     * @return \Shareforce\PhpWord\Style\Section
      *
      * @since 0.12.0
      */
@@ -594,7 +594,7 @@ class Section extends Border
     /**
      * Get line numbering
      *
-     * @return \PhpOffice\PhpWord\Style\LineNumbering
+     * @return \Shareforce\PhpWord\Style\LineNumbering
      */
     public function getLineNumbering()
     {

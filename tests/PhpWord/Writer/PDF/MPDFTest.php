@@ -15,14 +15,14 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\PDF;
+namespace Shareforce\PhpWord\Writer\PDF;
 
-use PhpOffice\PhpWord\PhpWord;
-use PhpOffice\PhpWord\Settings;
-use PhpOffice\PhpWord\Writer\PDF;
+use Shareforce\PhpWord\PhpWord;
+use Shareforce\PhpWord\Settings;
+use Shareforce\PhpWord\Writer\PDF;
 
 /**
- * Test class for PhpOffice\PhpWord\Writer\PDF\MPDF
+ * Test class for Shareforce\PhpWord\Writer\PDF\MPDF
  *
  * @runTestsInSeparateProcesses
  */

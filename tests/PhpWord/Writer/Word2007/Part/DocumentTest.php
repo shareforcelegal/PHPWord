@@ -15,19 +15,19 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\Word2007\Part;
+namespace Shareforce\PhpWord\Writer\Word2007\Part;
 
-use PhpOffice\PhpWord\ComplexType\FootnoteProperties;
-use PhpOffice\PhpWord\Metadata\DocInfo;
-use PhpOffice\PhpWord\PhpWord;
-use PhpOffice\PhpWord\SimpleType\Jc;
-use PhpOffice\PhpWord\SimpleType\NumberFormat;
-use PhpOffice\PhpWord\Style\Cell;
-use PhpOffice\PhpWord\Style\Font;
-use PhpOffice\PhpWord\TestHelperDOCX;
+use Shareforce\PhpWord\ComplexType\FootnoteProperties;
+use Shareforce\PhpWord\Metadata\DocInfo;
+use Shareforce\PhpWord\PhpWord;
+use Shareforce\PhpWord\SimpleType\Jc;
+use Shareforce\PhpWord\SimpleType\NumberFormat;
+use Shareforce\PhpWord\Style\Cell;
+use Shareforce\PhpWord\Style\Font;
+use Shareforce\PhpWord\TestHelperDOCX;
 
 /**
- * Test class for PhpOffice\PhpWord\Writer\Word2007\Part\Document
+ * Test class for Shareforce\PhpWord\Writer\Word2007\Part\Document
  *
  * @runTestsInSeparateProcesses
  */
@@ -214,7 +214,7 @@ class DocumentTest extends \PHPUnit\Framework\TestCase
     {
         $objectSrc = __DIR__ . '/../../../_files/documents/sheet.xls';
 
-        $tabs = array(new \PhpOffice\PhpWord\Style\Tab('right', 9090));
+        $tabs = array(new \Shareforce\PhpWord\Style\Tab('right', 9090));
         $phpWord = new PhpWord();
         $phpWord->addParagraphStyle(
             'pStyle',

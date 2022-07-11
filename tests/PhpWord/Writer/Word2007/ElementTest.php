@@ -15,17 +15,17 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\Word2007;
+namespace Shareforce\PhpWord\Writer\Word2007;
 
-use PhpOffice\PhpWord\Element\Comment;
-use PhpOffice\PhpWord\Element\TextRun;
-use PhpOffice\PhpWord\Element\TrackChange;
-use PhpOffice\PhpWord\PhpWord;
-use PhpOffice\PhpWord\Shared\XMLWriter;
-use PhpOffice\PhpWord\TestHelperDOCX;
+use Shareforce\PhpWord\Element\Comment;
+use Shareforce\PhpWord\Element\TextRun;
+use Shareforce\PhpWord\Element\TrackChange;
+use Shareforce\PhpWord\PhpWord;
+use Shareforce\PhpWord\Shared\XMLWriter;
+use Shareforce\PhpWord\TestHelperDOCX;
 
 /**
- * Test class for PhpOffice\PhpWord\Writer\Word2007\Element subnamespace
+ * Test class for Shareforce\PhpWord\Writer\Word2007\Element subnamespace
  */
 class ElementTest extends \PHPUnit\Framework\TestCase
 {
@@ -48,9 +48,9 @@ class ElementTest extends \PHPUnit\Framework\TestCase
             'Field', 'Line', 'Shape', 'Chart', 'FormField', 'SDT', 'Bookmark',
         );
         foreach ($elements as $element) {
-            $objectClass = 'PhpOffice\\PhpWord\\Writer\\Word2007\\Element\\' . $element;
+            $objectClass = 'Shareforce\\PhpWord\\Writer\\Word2007\\Element\\' . $element;
             $xmlWriter = new XMLWriter();
-            $newElement = new \PhpOffice\PhpWord\Element\PageBreak();
+            $newElement = new \Shareforce\PhpWord\Element\PageBreak();
             $object = new $objectClass($xmlWriter, $newElement);
             $object->write();
 
@@ -120,7 +120,7 @@ class ElementTest extends \PHPUnit\Framework\TestCase
         $phpWord = new PhpWord();
         $section = $phpWord->addSection();
 
-        $table = $section->addTable(array('alignment' => \PhpOffice\PhpWord\SimpleType\JcTable::CENTER));
+        $table = $section->addTable(array('alignment' => \Shareforce\PhpWord\SimpleType\JcTable::CENTER));
         $table->addRow(900);
         $table->addCell(2000)->addText('Row 1');
         $table->addCell(2000)->addText('Row 2');
@@ -490,7 +490,7 @@ class ElementTest extends \PHPUnit\Framework\TestCase
      */
     public function testTextWithAmpersant()
     {
-        \PhpOffice\PhpWord\Settings::setOutputEscapingEnabled(true);
+        \Shareforce\PhpWord\Settings::setOutputEscapingEnabled(true);
         $phpWord = new PhpWord();
         $section = $phpWord->addSection();
         $section->addText('this text contains an & (ampersant)');

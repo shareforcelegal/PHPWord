@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Exception;
+namespace Shareforce\PhpWord\Exception;
 
 /**
- * Test class for PhpOffice\PhpWord\Exception\UnsupportedImageTypeExceptionTest
+ * Test class for Shareforce\PhpWord\Exception\UnsupportedImageTypeExceptionTest
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Exception\UnsupportedImageTypeExceptionTest
+ * @coversDefaultClass \Shareforce\PhpWord\Exception\UnsupportedImageTypeExceptionTest
  * @runTestsInSeparateProcesses
  */
 class UnsupportedImageTypeExceptionTest extends \PHPUnit\Framework\TestCase
@@ -28,8 +28,8 @@ class UnsupportedImageTypeExceptionTest extends \PHPUnit\Framework\TestCase
     /**
      * Throw new exception
      *
-     * @expectedException \PhpOffice\PhpWord\Exception\UnsupportedImageTypeException
-     * @covers            \PhpOffice\PhpWord\Exception\UnsupportedImageTypeException
+     * @expectedException \Shareforce\PhpWord\Exception\UnsupportedImageTypeException
+     * @covers            \Shareforce\PhpWord\Exception\UnsupportedImageTypeException
      */
     public function testThrowException()
     {

@@ -15,13 +15,13 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\Word2007;
+namespace Shareforce\PhpWord\Writer\Word2007;
 
-use PhpOffice\PhpWord\PhpWord;
-use PhpOffice\PhpWord\TestHelperDOCX;
+use Shareforce\PhpWord\PhpWord;
+use Shareforce\PhpWord\TestHelperDOCX;
 
 /**
- * Test class for PhpOffice\PhpWord\Writer\Word2007\Element subnamespace
+ * Test class for Shareforce\PhpWord\Writer\Word2007\Element subnamespace
  */
 class FormFieldTest extends \PHPUnit\Framework\TestCase
 {

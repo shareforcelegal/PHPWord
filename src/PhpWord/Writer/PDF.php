@@ -15,11 +15,11 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer;
+namespace Shareforce\PhpWord\Writer;
 
-use PhpOffice\PhpWord\Exception\Exception;
-use PhpOffice\PhpWord\PhpWord;
-use PhpOffice\PhpWord\Settings;
+use Shareforce\PhpWord\Exception\Exception;
+use Shareforce\PhpWord\PhpWord;
+use Shareforce\PhpWord\Settings;
 
 /**
  * PDF Writer
@@ -31,16 +31,16 @@ class PDF
     /**
      * The wrapper for the requested PDF rendering engine
      *
-     * @var \PhpOffice\PhpWord\Writer\PDF\AbstractRenderer
+     * @var \Shareforce\PhpWord\Writer\PDF\AbstractRenderer
      */
     private $renderer = null;
 
     /**
      * Instantiate a new renderer of the configured type within this container class
      *
-     * @param \PhpOffice\PhpWord\PhpWord $phpWord
+     * @param \Shareforce\PhpWord\PhpWord $phpWord
      *
-     * @throws \PhpOffice\PhpWord\Exception\Exception
+     * @throws \Shareforce\PhpWord\Exception\Exception
      */
     public function __construct(PhpWord $phpWord)
     {

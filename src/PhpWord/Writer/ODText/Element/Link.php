@@ -15,7 +15,7 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\ODText\Element;
+namespace Shareforce\PhpWord\Writer\ODText\Element;
 
 /**
  * Text element writer
@@ -31,7 +31,7 @@ class Link extends AbstractElement
     {
         $xmlWriter = $this->getXmlWriter();
         $element = $this->getElement();
-        if (!$element instanceof \PhpOffice\PhpWord\Element\Link) {
+        if (!$element instanceof \Shareforce\PhpWord\Element\Link) {
             return;
         }
 

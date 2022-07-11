@@ -15,14 +15,14 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Style;
+namespace Shareforce\PhpWord\Style;
 
-use PhpOffice\PhpWord\ComplexType\TblWidth as TblWidthComplexType;
-use PhpOffice\PhpWord\SimpleType\JcTable;
-use PhpOffice\PhpWord\SimpleType\TblWidth;
+use Shareforce\PhpWord\ComplexType\TblWidth as TblWidthComplexType;
+use Shareforce\PhpWord\SimpleType\JcTable;
+use Shareforce\PhpWord\SimpleType\TblWidth;
 
 /**
- * Test class for PhpOffice\PhpWord\Style\Table
+ * Test class for Shareforce\PhpWord\Style\Table
  *
  * @runTestsInSeparateProcesses
  */
@@ -44,7 +44,7 @@ class TableTest extends \PHPUnit\Framework\TestCase
         $this->assertEquals('FF0000', $object->getBgColor());
 
         $firstRow = $object->getFirstRow();
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Style\\Table', $firstRow);
+        $this->assertInstanceOf('Shareforce\\PhpWord\\Style\\Table', $firstRow);
         $this->assertEquals(3, $firstRow->getBorderBottomSize());
     }
 

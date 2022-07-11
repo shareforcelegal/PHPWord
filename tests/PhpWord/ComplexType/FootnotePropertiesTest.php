@@ -15,14 +15,14 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\ComplexType;
+namespace Shareforce\PhpWord\ComplexType;
 
-use PhpOffice\PhpWord\SimpleType\NumberFormat;
+use Shareforce\PhpWord\SimpleType\NumberFormat;
 
 /**
- * Test class for PhpOffice\PhpWord\ComplexType\FootnoteProperties
+ * Test class for Shareforce\PhpWord\ComplexType\FootnoteProperties
  *
- * @coversDefaultClass \PhpOffice\PhpWord\ComplexType\FootnoteProperties
+ * @coversDefaultClass \Shareforce\PhpWord\ComplexType\FootnoteProperties
  * @runTestsInSeparateProcesses
  */
 class FootnotePropertiesTest extends \PHPUnit\Framework\TestCase

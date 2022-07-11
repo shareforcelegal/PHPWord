@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Shared;
+namespace Shareforce\PhpWord\Shared;
 
 /**
  * Test class for XMLReader
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Shared\XMLReader
+ * @coversDefaultClass \Shareforce\PhpWord\Shared\XMLReader
  */
 class XMLReaderTest extends \PHPUnit\Framework\TestCase
 {

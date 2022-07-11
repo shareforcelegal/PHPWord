@@ -15,13 +15,13 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Metadata;
+namespace Shareforce\PhpWord\Metadata;
 
-use PhpOffice\PhpWord\ComplexType\ProofState;
-use PhpOffice\PhpWord\SimpleType\Zoom;
+use Shareforce\PhpWord\ComplexType\ProofState;
+use Shareforce\PhpWord\SimpleType\Zoom;
 
 /**
- * Test class for PhpOffice\PhpWord\Metadata\Settings
+ * Test class for Shareforce\PhpWord\Metadata\Settings
  *
  * @runTestsInSeparateProcesses
  */

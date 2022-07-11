@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Exception;
+namespace Shareforce\PhpWord\Exception;
 
 /**
- * Test class for PhpOffice\PhpWord\Exception\InvalidImageException
+ * Test class for Shareforce\PhpWord\Exception\InvalidImageException
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Exception\InvalidImageException
+ * @coversDefaultClass \Shareforce\PhpWord\Exception\InvalidImageException
  * @runTestsInSeparateProcesses
  */
 class InvalidImageExceptionTest extends \PHPUnit\Framework\TestCase
@@ -28,8 +28,8 @@ class InvalidImageExceptionTest extends \PHPUnit\Framework\TestCase
     /**
      * Throw new exception
      *
-     * @expectedException \PhpOffice\PhpWord\Exception\InvalidImageException
-     * @covers            \PhpOffice\PhpWord\Exception\InvalidImageException
+     * @expectedException \Shareforce\PhpWord\Exception\InvalidImageException
+     * @covers            \Shareforce\PhpWord\Exception\InvalidImageException
      */
     public function testThrowException()
     {

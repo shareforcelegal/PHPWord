@@ -1,13 +1,13 @@
 <?php
 
-namespace PhpOffice\PhpWord\Writer\Word2007\Element;
+namespace Shareforce\PhpWord\Writer\Word2007\Element;
 
-use PhpOffice\PhpWord\PhpWord;
-use PhpOffice\PhpWord\TestHelperDOCX;
 use PHPUnit\Framework\TestCase;
+use Shareforce\PhpWord\PhpWord;
+use Shareforce\PhpWord\TestHelperDOCX;
 
 /**
- * Test class for PhpOffice\PhpWord\Writer\Word2007\Field
+ * Test class for Shareforce\PhpWord\Writer\Word2007\Field
  */
 class FieldTest extends TestCase
 {

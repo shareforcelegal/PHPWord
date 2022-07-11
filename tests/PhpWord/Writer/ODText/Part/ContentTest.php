@@ -15,16 +15,16 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\ODText\Part;
+namespace Shareforce\PhpWord\Writer\ODText\Part;
 
-use PhpOffice\PhpWord\PhpWord;
-use PhpOffice\PhpWord\SimpleType\Jc;
-use PhpOffice\PhpWord\TestHelperDOCX;
+use Shareforce\PhpWord\PhpWord;
+use Shareforce\PhpWord\SimpleType\Jc;
+use Shareforce\PhpWord\TestHelperDOCX;
 
 /**
- * Test class for PhpOffice\PhpWord\Writer\ODText\Part\Content
+ * Test class for Shareforce\PhpWord\Writer\ODText\Part\Content
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Writer\ODText\Part\Content
+ * @coversDefaultClass \Shareforce\PhpWord\Writer\ODText\Part\Content
  */
 class ContentTest extends \PHPUnit\Framework\TestCase
 {

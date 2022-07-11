@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Element;
+namespace Shareforce\PhpWord\Element;
 
 /**
- * Test class for PhpOffice\PhpWord\Element\TextBox
+ * Test class for Shareforce\PhpWord\Element\TextBox
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Element\TextBox
+ * @coversDefaultClass \Shareforce\PhpWord\Element\TextBox
  * @runTestsInSeparateProcesses
  */
 class TextBoxTest extends \PHPUnit\Framework\TestCase
@@ -32,7 +32,7 @@ class TextBoxTest extends \PHPUnit\Framework\TestCase
     {
         $oTextBox = new TextBox();
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\TextBox', $oTextBox);
+        $this->assertInstanceOf('Shareforce\\PhpWord\\Element\\TextBox', $oTextBox);
         $this->assertNull($oTextBox->getStyle());
     }
 
@@ -53,11 +53,11 @@ class TextBoxTest extends \PHPUnit\Framework\TestCase
     {
         $oTextBox = new TextBox(
             array(
-                'width'       => \PhpOffice\PhpWord\Shared\Converter::cmToPixel(4.5),
-                'height'      => \PhpOffice\PhpWord\Shared\Converter::cmToPixel(17.5),
+                'width'       => \Shareforce\PhpWord\Shared\Converter::cmToPixel(4.5),
+                'height'      => \Shareforce\PhpWord\Shared\Converter::cmToPixel(17.5),
                 'positioning' => 'absolute',
-                'marginLeft'  => \PhpOffice\PhpWord\Shared\Converter::cmToPixel(15.4),
-                'marginTop'   => \PhpOffice\PhpWord\Shared\Converter::cmToPixel(9.9),
+                'marginLeft'  => \Shareforce\PhpWord\Shared\Converter::cmToPixel(15.4),
+                'marginTop'   => \Shareforce\PhpWord\Shared\Converter::cmToPixel(9.9),
                 'stroke'      => 0,
                 'innerMargin' => 0,
                 'borderSize'  => 1,
@@ -65,6 +65,6 @@ class TextBoxTest extends \PHPUnit\Framework\TestCase
             )
         );
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Style\\TextBox', $oTextBox->getStyle());
+        $this->assertInstanceOf('Shareforce\\PhpWord\\Style\\TextBox', $oTextBox->getStyle());
     }
 }

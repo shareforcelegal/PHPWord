@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\Word2007\Part;
+namespace Shareforce\PhpWord\Writer\Word2007\Part;
 
-use PhpOffice\PhpWord\ComplexType\ProofState;
-use PhpOffice\PhpWord\ComplexType\TrackChangesView;
-use PhpOffice\PhpWord\Shared\Microsoft\PasswordEncoder;
-use PhpOffice\PhpWord\Style\Language;
+use Shareforce\PhpWord\ComplexType\ProofState;
+use Shareforce\PhpWord\ComplexType\TrackChangesView;
+use Shareforce\PhpWord\Shared\Microsoft\PasswordEncoder;
+use Shareforce\PhpWord\Style\Language;
 
 /**
  * Word2007 settings part writer: word/settings.xml
@@ -69,7 +69,7 @@ class Settings extends AbstractPart
     /**
      * Write indivual setting, recursive to any child settings.
      *
-     * @param \PhpOffice\PhpWord\Shared\XMLWriter $xmlWriter
+     * @param \Shareforce\PhpWord\Shared\XMLWriter $xmlWriter
      * @param string $settingKey
      * @param array|string $settingValue
      */
@@ -99,7 +99,7 @@ class Settings extends AbstractPart
      */
     private function getSettings()
     {
-        /** @var \PhpOffice\PhpWord\Metadata\Settings $documentSettings */
+        /** @var \Shareforce\PhpWord\Metadata\Settings $documentSettings */
         $documentSettings = $this->getParentWriter()->getPhpWord()->getSettings();
 
         // Default settings
@@ -181,7 +181,7 @@ class Settings extends AbstractPart
     /**
      * Get protection settings.
      *
-     * @param \PhpOffice\PhpWord\Metadata\Protection $documentProtection
+     * @param \Shareforce\PhpWord\Metadata\Protection $documentProtection
      */
     private function setDocumentProtection($documentProtection)
     {

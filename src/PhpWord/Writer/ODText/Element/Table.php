@@ -15,11 +15,11 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\ODText\Element;
+namespace Shareforce\PhpWord\Writer\ODText\Element;
 
-use PhpOffice\PhpWord\Element\Row as RowElement;
-use PhpOffice\PhpWord\Element\Table as TableElement;
-use PhpOffice\PhpWord\Shared\XMLWriter;
+use Shareforce\PhpWord\Element\Row as RowElement;
+use Shareforce\PhpWord\Element\Table as TableElement;
+use Shareforce\PhpWord\Shared\XMLWriter;
 
 /**
  * Table element writer
@@ -35,7 +35,7 @@ class Table extends AbstractElement
     {
         $xmlWriter = $this->getXmlWriter();
         $element = $this->getElement();
-        if (!$element instanceof \PhpOffice\PhpWord\Element\Table) {
+        if (!$element instanceof \Shareforce\PhpWord\Element\Table) {
             return;
         }
         $rows = $element->getRows();
@@ -60,8 +60,8 @@ class Table extends AbstractElement
     /**
      * Write column.
      *
-     * @param \PhpOffice\PhpWord\Shared\XMLWriter $xmlWriter
-     * @param \PhpOffice\PhpWord\Element\Table $element
+     * @param \Shareforce\PhpWord\Shared\XMLWriter $xmlWriter
+     * @param \Shareforce\PhpWord\Element\Table $element
      */
     private function writeColumns(XMLWriter $xmlWriter, TableElement $element)
     {
@@ -77,13 +77,13 @@ class Table extends AbstractElement
     /**
      * Write row.
      *
-     * @param \PhpOffice\PhpWord\Shared\XMLWriter $xmlWriter
-     * @param \PhpOffice\PhpWord\Element\Row $row
+     * @param \Shareforce\PhpWord\Shared\XMLWriter $xmlWriter
+     * @param \Shareforce\PhpWord\Element\Row $row
      */
     private function writeRow(XMLWriter $xmlWriter, RowElement $row)
     {
         $xmlWriter->startElement('table:table-row');
-        /** @var $row \PhpOffice\PhpWord\Element\Row Type hint */
+        /** @var $row \Shareforce\PhpWord\Element\Row Type hint */
         foreach ($row->getCells() as $cell) {
             $xmlWriter->startElement('table:table-cell');
             $xmlWriter->writeAttribute('office:value-type', 'string');

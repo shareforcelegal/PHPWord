@@ -15,18 +15,18 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\Word2007\Part;
+namespace Shareforce\PhpWord\Writer\Word2007\Part;
 
-use PhpOffice\PhpWord\PhpWord;
-use PhpOffice\PhpWord\SimpleType\Jc;
-use PhpOffice\PhpWord\Style\Font;
-use PhpOffice\PhpWord\Style\Paragraph;
-use PhpOffice\PhpWord\TestHelperDOCX;
+use Shareforce\PhpWord\PhpWord;
+use Shareforce\PhpWord\SimpleType\Jc;
+use Shareforce\PhpWord\Style\Font;
+use Shareforce\PhpWord\Style\Paragraph;
+use Shareforce\PhpWord\TestHelperDOCX;
 
 /**
- * Test class for PhpOffice\PhpWord\Writer\Word2007\Part\Styles
+ * Test class for Shareforce\PhpWord\Writer\Word2007\Part\Styles
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Writer\Word2007\Part\Styles
+ * @coversDefaultClass \Shareforce\PhpWord\Writer\Word2007\Part\Styles
  * @runTestsInSeparateProcesses
  */
 class StylesTest extends \PHPUnit\Framework\TestCase

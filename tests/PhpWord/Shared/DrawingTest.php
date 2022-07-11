@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Shared;
+namespace Shareforce\PhpWord\Shared;
 
 /**
- * Test class for PhpOffice\PhpWord\Shared\Drawing
+ * Test class for Shareforce\PhpWord\Shared\Drawing
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Shared\Drawing
+ * @coversDefaultClass \Shareforce\PhpWord\Shared\Drawing
  */
 class DrawingTest extends \PHPUnit\Framework\TestCase
 {

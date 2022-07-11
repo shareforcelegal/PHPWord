@@ -15,15 +15,15 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\ODText\Style;
+namespace Shareforce\PhpWord\Writer\ODText\Style;
 
-use PhpOffice\PhpWord\Style\Image;
-use PhpOffice\PhpWord\TestHelperDOCX;
+use Shareforce\PhpWord\Style\Image;
+use Shareforce\PhpWord\TestHelperDOCX;
 
 /**
- * Test class for PhpOffice\PhpWord\Writer\ODText\Element\Image
+ * Test class for Shareforce\PhpWord\Writer\ODText\Element\Image
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Writer\ODText\Element\Image
+ * @coversDefaultClass \Shareforce\PhpWord\Writer\ODText\Element\Image
  */
 class ImageTest extends \PHPUnit\Framework\TestCase
 {
@@ -40,7 +40,7 @@ class ImageTest extends \PHPUnit\Framework\TestCase
      */
     public function testImage1()
     {
-        $phpWord = new \PhpOffice\PhpWord\PhpWord();
+        $phpWord = new \Shareforce\PhpWord\PhpWord();
         $section = $phpWord->addSection();
         $section->addImage(__DIR__ . '/../../../_files/images/earth.jpg');
         $section->addImage(__DIR__ . '/../../../_files/images/mario.gif', array('align' => 'end'));

@@ -15,13 +15,13 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\Word2007\Part;
+namespace Shareforce\PhpWord\Writer\Word2007\Part;
 
-use PhpOffice\PhpWord\PhpWord;
-use PhpOffice\PhpWord\TestHelperDOCX;
+use Shareforce\PhpWord\PhpWord;
+use Shareforce\PhpWord\TestHelperDOCX;
 
 /**
- * Test class for PhpOffice\PhpWord\Writer\Word2007\Part\Comment
+ * Test class for Shareforce\PhpWord\Writer\Word2007\Part\Comment
  *
  * @runTestsInSeparateProcesses
  */
@@ -40,7 +40,7 @@ class CommentsTest extends \PHPUnit\Framework\TestCase
      */
     public function testWriteComments()
     {
-        $comment = new \PhpOffice\PhpWord\Element\Comment('Authors name', new \DateTime(), 'my_initials');
+        $comment = new \Shareforce\PhpWord\Element\Comment('Authors name', new \DateTime(), 'my_initials');
         $comment->addText('Test');
 
         $phpWord = new PhpWord();

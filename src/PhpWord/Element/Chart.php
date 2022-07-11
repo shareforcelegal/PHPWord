@@ -15,9 +15,9 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Element;
+namespace Shareforce\PhpWord\Element;
 
-use PhpOffice\PhpWord\Style\Chart as ChartStyle;
+use Shareforce\PhpWord\Style\Chart as ChartStyle;
 
 /**
  * Chart element
@@ -50,7 +50,7 @@ class Chart extends AbstractElement
     /**
      * Chart style
      *
-     * @var \PhpOffice\PhpWord\Style\Chart
+     * @var \Shareforce\PhpWord\Style\Chart
      */
     private $style;
 
@@ -120,7 +120,7 @@ class Chart extends AbstractElement
     /**
      * Get chart style
      *
-     * @return \PhpOffice\PhpWord\Style\Chart
+     * @return \Shareforce\PhpWord\Style\Chart
      */
     public function getStyle()
     {

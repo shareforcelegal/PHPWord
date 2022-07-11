@@ -15,13 +15,13 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Element;
+namespace Shareforce\PhpWord\Element;
 
-use PhpOffice\PhpWord\AbstractWebServerEmbeddedTest;
-use PhpOffice\PhpWord\SimpleType\Jc;
+use Shareforce\PhpWord\AbstractWebServerEmbeddedTest;
+use Shareforce\PhpWord\SimpleType\Jc;
 
 /**
- * Test class for PhpOffice\PhpWord\Element\Image
+ * Test class for Shareforce\PhpWord\Element\Image
  *
  * @runTestsInSeparateProcesses
  */
@@ -35,12 +35,12 @@ class ImageTest extends AbstractWebServerEmbeddedTest
         $src = __DIR__ . '/../_files/images/firefox.png';
         $oImage = new Image($src);
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\Image', $oImage);
+        $this->assertInstanceOf('Shareforce\\PhpWord\\Element\\Image', $oImage);
         $this->assertEquals($src, $oImage->getSource());
         $this->assertEquals(md5($src), $oImage->getMediaId());
         $this->assertFalse($oImage->isWatermark());
         $this->assertEquals(Image::SOURCE_LOCAL, $oImage->getSourceType());
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Style\\Image', $oImage->getStyle());
+        $this->assertInstanceOf('Shareforce\\PhpWord\\Style\\Image', $oImage->getStyle());
     }
 
     /**
@@ -55,11 +55,11 @@ class ImageTest extends AbstractWebServerEmbeddedTest
                 'width'         => 210,
                 'height'        => 210,
                 'alignment'     => Jc::CENTER,
-                'wrappingStyle' => \PhpOffice\PhpWord\Style\Image::WRAPPING_STYLE_BEHIND,
+                'wrappingStyle' => \Shareforce\PhpWord\Style\Image::WRAPPING_STYLE_BEHIND,
             )
         );
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Style\\Image', $oImage->getStyle());
+        $this->assertInstanceOf('Shareforce\\PhpWord\\Style\\Image', $oImage->getStyle());
     }
 
     /**
@@ -80,7 +80,7 @@ class ImageTest extends AbstractWebServerEmbeddedTest
             $nam = ucfirst(strtok($source, '.'));
             $source = __DIR__ . "/../_files/images/{$source}";
             $image = new Image($source, null, null, $nam);
-            $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\Image', $image);
+            $this->assertInstanceOf('Shareforce\\PhpWord\\Element\\Image', $image);
             $this->assertEquals($source, $image->getSource());
             $this->assertEquals($nam, $image->getName());
             $this->assertEquals(md5($source), $image->getMediaId());
@@ -103,13 +103,13 @@ class ImageTest extends AbstractWebServerEmbeddedTest
             array('height' => 210, 'alignment' => Jc::CENTER)
         );
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Style\\Image', $oImage->getStyle());
+        $this->assertInstanceOf('Shareforce\\PhpWord\\Style\\Image', $oImage->getStyle());
     }
 
     /**
      * Test invalid local image
      *
-     * @expectedException \PhpOffice\PhpWord\Exception\InvalidImageException
+     * @expectedException \Shareforce\PhpWord\Exception\InvalidImageException
      */
     public function testInvalidImageLocal()
     {
@@ -119,7 +119,7 @@ class ImageTest extends AbstractWebServerEmbeddedTest
     /**
      * Test invalid PHP Image
      *
-     * @expectedException \PhpOffice\PhpWord\Exception\InvalidImageException
+     * @expectedException \Shareforce\PhpWord\Exception\InvalidImageException
      */
     public function testInvalidImagePhp()
     {
@@ -130,7 +130,7 @@ class ImageTest extends AbstractWebServerEmbeddedTest
     /**
      * Test unsupported image
      *
-     * @expectedException \PhpOffice\PhpWord\Exception\UnsupportedImageTypeException
+     * @expectedException \Shareforce\PhpWord\Exception\UnsupportedImageTypeException
      */
     public function testUnsupportedImage()
     {
@@ -200,7 +200,7 @@ class ImageTest extends AbstractWebServerEmbeddedTest
         $source = file_get_contents(__DIR__ . '/../_files/images/earth.jpg');
 
         $image = new Image($source);
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\Image', $image);
+        $this->assertInstanceOf('Shareforce\\PhpWord\\Element\\Image', $image);
         $this->assertEquals($source, $image->getSource());
         $this->assertEquals(md5($source), $image->getMediaId());
         $this->assertEquals('image/jpeg', $image->getImageType());
@@ -221,7 +221,7 @@ class ImageTest extends AbstractWebServerEmbeddedTest
         $source = self::getRemoteImageUrl();
 
         $image = new Image($source);
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\Image', $image);
+        $this->assertInstanceOf('Shareforce\\PhpWord\\Element\\Image', $image);
         $this->assertEquals($source, $image->getSource());
         $this->assertEquals(md5($source), $image->getMediaId());
         $this->assertEquals('image/png', $image->getImageType());
@@ -237,7 +237,7 @@ class ImageTest extends AbstractWebServerEmbeddedTest
     /**
      * Test invalid string image
      *
-     * @expectedException \PhpOffice\PhpWord\Exception\InvalidImageException
+     * @expectedException \Shareforce\PhpWord\Exception\InvalidImageException
      */
     public function testInvalidImageString()
     {

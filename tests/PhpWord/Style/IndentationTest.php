@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Style;
+namespace Shareforce\PhpWord\Style;
 
 /**
- * Test class for PhpOffice\PhpWord\Style\Indentation
+ * Test class for Shareforce\PhpWord\Style\Indentation
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Style\Indentation
+ * @coversDefaultClass \Shareforce\PhpWord\Style\Indentation
  */
 class IndentationTest extends \PHPUnit\Framework\TestCase
 {

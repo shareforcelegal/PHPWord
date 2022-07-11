@@ -15,14 +15,14 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Style;
+namespace Shareforce\PhpWord\Style;
 
-use PhpOffice\PhpWord\SimpleType\VerticalJc;
+use Shareforce\PhpWord\SimpleType\VerticalJc;
 
 /**
- * Test class for PhpOffice\PhpWord\Style\Cell
+ * Test class for Shareforce\PhpWord\Style\Cell
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Style\Cell
+ * @coversDefaultClass \Shareforce\PhpWord\Style\Cell
  * @runTestsInSeparateProcesses
  */
 class CellTest extends \PHPUnit\Framework\TestCase

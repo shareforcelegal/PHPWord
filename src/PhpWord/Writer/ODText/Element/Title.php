@@ -15,7 +15,7 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\ODText\Element;
+namespace Shareforce\PhpWord\Writer\ODText\Element;
 
 /**
  * Title element writer
@@ -31,14 +31,14 @@ class Title extends AbstractElement
     {
         $xmlWriter = $this->getXmlWriter();
         $element = $this->getElement();
-        if (!$element instanceof \PhpOffice\PhpWord\Element\Title) {
+        if (!$element instanceof \Shareforce\PhpWord\Element\Title) {
             return;
         }
 
         $xmlWriter->startElement('text:h');
         $hdname = 'HD';
         $sect = $element->getParent();
-        if ($sect instanceof \PhpOffice\PhpWord\Element\Section) {
+        if ($sect instanceof \Shareforce\PhpWord\Element\Section) {
             if (self::compareToFirstElement($element, $sect->getElements())) {
                 $hdname = 'HE';
             }
@@ -55,7 +55,7 @@ class Title extends AbstractElement
         $text = $element->getText();
         if (is_string($text)) {
             $this->writeText($text);
-        } elseif ($text instanceof \PhpOffice\PhpWord\Element\AbstractContainer) {
+        } elseif ($text instanceof \Shareforce\PhpWord\Element\AbstractContainer) {
             $containerWriter = new Container($xmlWriter, $text);
             $containerWriter->write();
         }
@@ -66,9 +66,9 @@ class Title extends AbstractElement
     /**
      * Test if element is same as first element in array
      *
-     * @param \PhpOffice\PhpWord\Element\AbstractElement $elem
+     * @param \Shareforce\PhpWord\Element\AbstractElement $elem
      *
-     * @param \PhpOffice\PhpWord\Element\AbstractElement[] $elemarray
+     * @param \Shareforce\PhpWord\Element\AbstractElement[] $elemarray
      *
      * @return bool
      */

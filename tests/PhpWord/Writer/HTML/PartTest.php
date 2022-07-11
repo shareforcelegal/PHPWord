@@ -15,19 +15,19 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\HTML;
+namespace Shareforce\PhpWord\Writer\HTML;
 
-use PhpOffice\PhpWord\Writer\HTML\Part\Body;
+use Shareforce\PhpWord\Writer\HTML\Part\Body;
 
 /**
- * Test class for PhpOffice\PhpWord\Writer\HTML\Part subnamespace
+ * Test class for Shareforce\PhpWord\Writer\HTML\Part subnamespace
  */
 class PartTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * Test get parent writer exception
      *
-     * @expectedException \PhpOffice\PhpWord\Exception\Exception
+     * @expectedException \Shareforce\PhpWord\Exception\Exception
      */
     public function testGetParentWriterException()
     {

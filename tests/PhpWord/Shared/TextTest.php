@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Shared;
+namespace Shareforce\PhpWord\Shared;
 
 /**
  * Test class for Text
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Shared\Text
+ * @coversDefaultClass \Shareforce\PhpWord\Shared\Text
  */
 class TextTest extends \PHPUnit\Framework\TestCase
 {

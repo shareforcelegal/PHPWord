@@ -15,11 +15,11 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Element;
+namespace Shareforce\PhpWord\Element;
 
-use PhpOffice\PhpWord\Shared\Text as SharedText;
-use PhpOffice\PhpWord\Style\Font;
-use PhpOffice\PhpWord\Style\Paragraph;
+use Shareforce\PhpWord\Shared\Text as SharedText;
+use Shareforce\PhpWord\Style\Font;
+use Shareforce\PhpWord\Style\Paragraph;
 
 /**
  * Text element
@@ -36,14 +36,14 @@ class Text extends AbstractElement
     /**
      * Text style
      *
-     * @var string|\PhpOffice\PhpWord\Style\Font
+     * @var string|\Shareforce\PhpWord\Style\Font
      */
     protected $fontStyle;
 
     /**
      * Paragraph style
      *
-     * @var string|\PhpOffice\PhpWord\Style\Paragraph
+     * @var string|\Shareforce\PhpWord\Style\Paragraph
      */
     protected $paragraphStyle;
 
@@ -64,9 +64,9 @@ class Text extends AbstractElement
     /**
      * Set Text style
      *
-     * @param string|array|\PhpOffice\PhpWord\Style\Font $style
-     * @param string|array|\PhpOffice\PhpWord\Style\Paragraph $paragraphStyle
-     * @return string|\PhpOffice\PhpWord\Style\Font
+     * @param string|array|\Shareforce\PhpWord\Style\Font $style
+     * @param string|array|\Shareforce\PhpWord\Style\Paragraph $paragraphStyle
+     * @return string|\Shareforce\PhpWord\Style\Font
      */
     public function setFontStyle($style = null, $paragraphStyle = null)
     {
@@ -89,7 +89,7 @@ class Text extends AbstractElement
     /**
      * Get Text style
      *
-     * @return string|\PhpOffice\PhpWord\Style\Font
+     * @return string|\Shareforce\PhpWord\Style\Font
      */
     public function getFontStyle()
     {
@@ -99,8 +99,8 @@ class Text extends AbstractElement
     /**
      * Set Paragraph style
      *
-     * @param string|array|\PhpOffice\PhpWord\Style\Paragraph $style
-     * @return string|\PhpOffice\PhpWord\Style\Paragraph
+     * @param string|array|\Shareforce\PhpWord\Style\Paragraph $style
+     * @return string|\Shareforce\PhpWord\Style\Paragraph
      */
     public function setParagraphStyle($style = null)
     {
@@ -121,7 +121,7 @@ class Text extends AbstractElement
     /**
      * Get Paragraph style
      *
-     * @return string|\PhpOffice\PhpWord\Style\Paragraph
+     * @return string|\Shareforce\PhpWord\Style\Paragraph
      */
     public function getParagraphStyle()
     {

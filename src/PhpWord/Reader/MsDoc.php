@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Reader;
+namespace Shareforce\PhpWord\Reader;
 
-use PhpOffice\PhpWord\PhpWord;
-use PhpOffice\PhpWord\Shared\Drawing;
-use PhpOffice\PhpWord\Shared\OLERead;
-use PhpOffice\PhpWord\Style;
+use Shareforce\PhpWord\PhpWord;
+use Shareforce\PhpWord\Shared\Drawing;
+use Shareforce\PhpWord\Shared\OLERead;
+use Shareforce\PhpWord\Style;
 
 /**
  * Reader for Word97

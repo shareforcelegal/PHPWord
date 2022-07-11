@@ -15,17 +15,17 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\Word2007\Part;
+namespace Shareforce\PhpWord\Writer\Word2007\Part;
 
-use PhpOffice\PhpWord\PhpWord;
-use PhpOffice\PhpWord\SimpleType\Jc;
-use PhpOffice\PhpWord\SimpleType\NumberFormat;
-use PhpOffice\PhpWord\TestHelperDOCX;
+use Shareforce\PhpWord\PhpWord;
+use Shareforce\PhpWord\SimpleType\Jc;
+use Shareforce\PhpWord\SimpleType\NumberFormat;
+use Shareforce\PhpWord\TestHelperDOCX;
 
 /**
- * Test class for PhpOffice\PhpWord\Writer\Word2007\Part\Numbering
+ * Test class for Shareforce\PhpWord\Writer\Word2007\Part\Numbering
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Writer\Word2007\Part\Numbering
+ * @coversDefaultClass \Shareforce\PhpWord\Writer\Word2007\Part\Numbering
  * @runTestsInSeparateProcesses
  * @since 0.10.0
  */

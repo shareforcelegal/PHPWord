@@ -15,7 +15,7 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\Word2007\Element;
+namespace Shareforce\PhpWord\Writer\Word2007\Element;
 
 /**
  * Bookmark element writer
@@ -31,7 +31,7 @@ class Bookmark extends AbstractElement
     {
         $xmlWriter = $this->getXmlWriter();
         $element = $this->getElement();
-        if (!$element instanceof \PhpOffice\PhpWord\Element\Bookmark) {
+        if (!$element instanceof \Shareforce\PhpWord\Element\Bookmark) {
             return;
         }
 

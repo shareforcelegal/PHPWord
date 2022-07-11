@@ -15,10 +15,10 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\Word2007\Style;
+namespace Shareforce\PhpWord\Writer\Word2007\Style;
 
-use PhpOffice\PhpWord\Settings;
-use PhpOffice\PhpWord\Shared\XMLWriter;
+use Shareforce\PhpWord\Settings;
+use Shareforce\PhpWord\Shared\XMLWriter;
 
 /**
  * Style writer
@@ -30,14 +30,14 @@ abstract class AbstractStyle
     /**
      * XML writer
      *
-     * @var \PhpOffice\PhpWord\Shared\XMLWriter
+     * @var \Shareforce\PhpWord\Shared\XMLWriter
      */
     private $xmlWriter;
 
     /**
      * Style; set protected for a while
      *
-     * @var string|\PhpOffice\PhpWord\Style\AbstractStyle
+     * @var string|\Shareforce\PhpWord\Style\AbstractStyle
      */
     protected $style;
 
@@ -49,8 +49,8 @@ abstract class AbstractStyle
     /**
      * Create new instance.
      *
-     * @param \PhpOffice\PhpWord\Shared\XMLWriter $xmlWriter
-     * @param string|\PhpOffice\PhpWord\Style\AbstractStyle $style
+     * @param \Shareforce\PhpWord\Shared\XMLWriter $xmlWriter
+     * @param string|\Shareforce\PhpWord\Style\AbstractStyle $style
      */
     public function __construct(XMLWriter $xmlWriter, $style = null)
     {
@@ -61,7 +61,7 @@ abstract class AbstractStyle
     /**
      * Get XML Writer
      *
-     * @return \PhpOffice\PhpWord\Shared\XMLWriter
+     * @return \Shareforce\PhpWord\Shared\XMLWriter
      */
     protected function getXmlWriter()
     {
@@ -71,7 +71,7 @@ abstract class AbstractStyle
     /**
      * Get Style
      *
-     * @return string|\PhpOffice\PhpWord\Style\AbstractStyle
+     * @return string|\Shareforce\PhpWord\Style\AbstractStyle
      */
     protected function getStyle()
     {
@@ -106,16 +106,16 @@ abstract class AbstractStyle
     /**
      * Write child style.
      *
-     * @param \PhpOffice\PhpWord\Shared\XMLWriter $xmlWriter
+     * @param \Shareforce\PhpWord\Shared\XMLWriter $xmlWriter
      * @param string $name
      * @param mixed $value
      */
     protected function writeChildStyle(XMLWriter $xmlWriter, $name, $value)
     {
         if ($value !== null) {
-            $class = 'PhpOffice\\PhpWord\\Writer\\Word2007\\Style\\' . $name;
+            $class = 'Shareforce\\PhpWord\\Writer\\Word2007\\Style\\' . $name;
 
-            /** @var \PhpOffice\PhpWord\Writer\Word2007\Style\AbstractStyle $writer */
+            /** @var \Shareforce\PhpWord\Writer\Word2007\Style\AbstractStyle $writer */
             $writer = new $class($xmlWriter, $value);
             $writer->write();
         }

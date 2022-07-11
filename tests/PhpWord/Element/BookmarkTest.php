@@ -15,10 +15,10 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Element;
+namespace Shareforce\PhpWord\Element;
 
 /**
- * Test class for PhpOffice\PhpWord\Element\Footer
+ * Test class for Shareforce\PhpWord\Element\Footer
  *
  * @runTestsInSeparateProcesses
  */
@@ -32,7 +32,7 @@ class BookmarkTest extends \PHPUnit\Framework\TestCase
         $bookmarkName = 'test';
         $oBookmark = new Bookmark($bookmarkName);
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\Bookmark', $oBookmark);
+        $this->assertInstanceOf('Shareforce\\PhpWord\\Element\\Bookmark', $oBookmark);
         $this->assertEquals($bookmarkName, $oBookmark->getName());
     }
 }

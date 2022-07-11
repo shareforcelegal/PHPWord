@@ -15,9 +15,9 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\RTF\Style;
+namespace Shareforce\PhpWord\Writer\RTF\Style;
 
-use PhpOffice\PhpWord\Style\Font as FontStyle;
+use Shareforce\PhpWord\Style\Font as FontStyle;
 
 /**
  * RTF font style writer

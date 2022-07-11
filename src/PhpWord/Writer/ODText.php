@@ -15,10 +15,10 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer;
+namespace Shareforce\PhpWord\Writer;
 
-use PhpOffice\PhpWord\Media;
-use PhpOffice\PhpWord\PhpWord;
+use Shareforce\PhpWord\Media;
+use Shareforce\PhpWord\PhpWord;
 
 /**
  * ODText writer
@@ -30,7 +30,7 @@ class ODText extends AbstractWriter implements WriterInterface
     /**
      * Create new ODText writer
      *
-     * @param \PhpOffice\PhpWord\PhpWord $phpWord
+     * @param \Shareforce\PhpWord\PhpWord $phpWord
      */
     public function __construct(PhpWord $phpWord = null)
     {
@@ -48,7 +48,7 @@ class ODText extends AbstractWriter implements WriterInterface
         foreach (array_keys($this->parts) as $partName) {
             $partClass = get_class($this) . '\\Part\\' . $partName;
             if (class_exists($partClass)) {
-                /** @var $partObject \PhpOffice\PhpWord\Writer\ODText\Part\AbstractPart Type hint */
+                /** @var $partObject \Shareforce\PhpWord\Writer\ODText\Part\AbstractPart Type hint */
                 $partObject = new $partClass();
                 $partObject->setParentWriter($this);
                 $this->writerParts[strtolower($partName)] = $partObject;

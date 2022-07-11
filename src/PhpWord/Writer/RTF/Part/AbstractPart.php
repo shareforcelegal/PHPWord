@@ -15,11 +15,11 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\RTF\Part;
+namespace Shareforce\PhpWord\Writer\RTF\Part;
 
-use PhpOffice\PhpWord\Escaper\Rtf;
-use PhpOffice\PhpWord\Exception\Exception;
-use PhpOffice\PhpWord\Writer\AbstractWriter;
+use Shareforce\PhpWord\Escaper\Rtf;
+use Shareforce\PhpWord\Exception\Exception;
+use Shareforce\PhpWord\Writer\AbstractWriter;
 
 /**
  * @since 0.11.0
@@ -27,12 +27,12 @@ use PhpOffice\PhpWord\Writer\AbstractWriter;
 abstract class AbstractPart
 {
     /**
-     * @var \PhpOffice\PhpWord\Writer\AbstractWriter
+     * @var \Shareforce\PhpWord\Writer\AbstractWriter
      */
     private $parentWriter;
 
     /**
-     * @var \PhpOffice\PhpWord\Escaper\EscaperInterface
+     * @var \Shareforce\PhpWord\Escaper\EscaperInterface
      */
     protected $escaper;
 
@@ -47,7 +47,7 @@ abstract class AbstractPart
     abstract public function write();
 
     /**
-     * @param \PhpOffice\PhpWord\Writer\AbstractWriter $writer
+     * @param \Shareforce\PhpWord\Writer\AbstractWriter $writer
      */
     public function setParentWriter(AbstractWriter $writer = null)
     {
@@ -55,8 +55,8 @@ abstract class AbstractPart
     }
 
     /**
-     * @throws \PhpOffice\PhpWord\Exception\Exception
-     * @return \PhpOffice\PhpWord\Writer\AbstractWriter
+     * @throws \Shareforce\PhpWord\Exception\Exception
+     * @return \Shareforce\PhpWord\Writer\AbstractWriter
      */
     public function getParentWriter()
     {

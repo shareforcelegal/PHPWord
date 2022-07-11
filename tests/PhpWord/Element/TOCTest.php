@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Element;
+namespace Shareforce\PhpWord\Element;
 
-use PhpOffice\PhpWord\PhpWord;
+use Shareforce\PhpWord\PhpWord;
 
 /**
- * Test class for PhpOffice\PhpWord\Element\TOC
+ * Test class for Shareforce\PhpWord\Element\TOC
  *
  * @runTestsInSeparateProcesses
  */
@@ -33,14 +33,14 @@ class TOCTest extends \PHPUnit\Framework\TestCase
     {
         $expected = array(
             'position' => 9062,
-            'leader'   => \PhpOffice\PhpWord\Style\Tab::TAB_LEADER_DOT,
+            'leader'   => \Shareforce\PhpWord\Style\Tab::TAB_LEADER_DOT,
             'indent'   => 200,
         );
         $object = new TOC(array('size' => 11), array('position' => $expected['position']));
         $tocStyle = $object->getStyleTOC();
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Style\\TOC', $tocStyle);
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Style\\Font', $object->getStyleFont());
+        $this->assertInstanceOf('Shareforce\\PhpWord\\Style\\TOC', $tocStyle);
+        $this->assertInstanceOf('Shareforce\\PhpWord\\Style\\Font', $object->getStyleFont());
 
         foreach ($expected as $key => $value) {
             $method = "get{$key}";
