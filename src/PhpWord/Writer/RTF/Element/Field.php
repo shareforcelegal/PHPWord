@@ -15,7 +15,7 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\RTF\Element;
+namespace Shareforce\PhpWord\Writer\RTF\Element;
 
 /**
  * Field element writer
@@ -30,7 +30,7 @@ class Field extends Text
     public function write()
     {
         $element = $this->element;
-        if (!$element instanceof \PhpOffice\PhpWord\Element\Field) {
+        if (!$element instanceof \Shareforce\PhpWord\Element\Field) {
             return;
         }
 
@@ -66,7 +66,7 @@ class Field extends Text
         return 'NUMPAGES';
     }
 
-    protected function writeDate(\PhpOffice\PhpWord\Element\Field $element)
+    protected function writeDate(\Shareforce\PhpWord\Element\Field $element)
     {
         $content = '';
         $content .= 'DATE';

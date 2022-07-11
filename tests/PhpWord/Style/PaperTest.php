@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Style;
+namespace Shareforce\PhpWord\Style;
 
-use PhpOffice\PhpWord\TestHelperDOCX;
+use Shareforce\PhpWord\TestHelperDOCX;
 
 /**
- * Test class for PhpOffice\PhpWord\Style\Paper
+ * Test class for Shareforce\PhpWord\Style\Paper
  *
  * @runTestsInSeparateProcesses
  */

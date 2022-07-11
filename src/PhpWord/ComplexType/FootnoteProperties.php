@@ -15,9 +15,9 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\ComplexType;
+namespace Shareforce\PhpWord\ComplexType;
 
-use PhpOffice\PhpWord\SimpleType\NumberFormat;
+use Shareforce\PhpWord\SimpleType\NumberFormat;
 
 /**
  * Footnote properties
@@ -43,7 +43,7 @@ final class FootnoteProperties
     private $pos;
 
     /**
-     * Footnote Numbering Format w:numFmt, one of PhpOffice\PhpWord\SimpleType\NumberFormat
+     * Footnote Numbering Format w:numFmt, one of Shareforce\PhpWord\SimpleType\NumberFormat
      *
      * @var string
      */

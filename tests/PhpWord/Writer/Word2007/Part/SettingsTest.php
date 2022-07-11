@@ -15,20 +15,20 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\Word2007\Part;
+namespace Shareforce\PhpWord\Writer\Word2007\Part;
 
-use PhpOffice\PhpWord\ComplexType\ProofState;
-use PhpOffice\PhpWord\ComplexType\TrackChangesView;
-use PhpOffice\PhpWord\PhpWord;
-use PhpOffice\PhpWord\Shared\Microsoft\PasswordEncoder;
-use PhpOffice\PhpWord\SimpleType\Zoom;
-use PhpOffice\PhpWord\Style\Language;
-use PhpOffice\PhpWord\TestHelperDOCX;
+use Shareforce\PhpWord\ComplexType\ProofState;
+use Shareforce\PhpWord\ComplexType\TrackChangesView;
+use Shareforce\PhpWord\PhpWord;
+use Shareforce\PhpWord\Shared\Microsoft\PasswordEncoder;
+use Shareforce\PhpWord\SimpleType\Zoom;
+use Shareforce\PhpWord\Style\Language;
+use Shareforce\PhpWord\TestHelperDOCX;
 
 /**
- * Test class for PhpOffice\PhpWord\Writer\Word2007\Part\Settings
+ * Test class for Shareforce\PhpWord\Writer\Word2007\Part\Settings
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Writer\Word2007\Part\Settings
+ * @coversDefaultClass \Shareforce\PhpWord\Writer\Word2007\Part\Settings
  */
 class SettingsTest extends \PHPUnit\Framework\TestCase
 {

@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Style;
+namespace Shareforce\PhpWord\Style;
 
 /**
- * Test class for PhpOffice\PhpWord\Style\LineNumbering
+ * Test class for Shareforce\PhpWord\Style\LineNumbering
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Style\LineNumbering
+ * @coversDefaultClass \Shareforce\PhpWord\Style\LineNumbering
  */
 class LineNumberingTest extends \PHPUnit\Framework\TestCase
 {

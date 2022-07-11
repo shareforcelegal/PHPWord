@@ -15,10 +15,10 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Element;
+namespace Shareforce\PhpWord\Element;
 
-use PhpOffice\PhpWord\Media;
-use PhpOffice\PhpWord\PhpWord;
+use Shareforce\PhpWord\Media;
+use Shareforce\PhpWord\PhpWord;
 
 /**
  * Element abstract class
@@ -30,7 +30,7 @@ abstract class AbstractElement
     /**
      * PhpWord object
      *
-     * @var \PhpOffice\PhpWord\PhpWord
+     * @var \Shareforce\PhpWord\PhpWord
      */
     protected $phpWord;
 
@@ -145,7 +145,7 @@ abstract class AbstractElement
     /**
      * Get PhpWord
      *
-     * @return \PhpOffice\PhpWord\PhpWord
+     * @return \Shareforce\PhpWord\PhpWord
      */
     public function getPhpWord()
     {
@@ -155,7 +155,7 @@ abstract class AbstractElement
     /**
      * Set PhpWord as reference.
      *
-     * @param \PhpOffice\PhpWord\PhpWord $phpWord
+     * @param \Shareforce\PhpWord\PhpWord $phpWord
      */
     public function setPhpWord(PhpWord $phpWord = null)
     {
@@ -350,7 +350,7 @@ abstract class AbstractElement
      *
      * Passed parameter should be a container, except for Table (contain Row) and Row (contain Cell)
      *
-     * @param \PhpOffice\PhpWord\Element\AbstractElement $container
+     * @param \Shareforce\PhpWord\Element\AbstractElement $container
      */
     public function setParentContainer(self $container)
     {

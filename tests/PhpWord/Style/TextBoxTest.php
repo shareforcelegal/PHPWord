@@ -15,14 +15,14 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Style;
+namespace Shareforce\PhpWord\Style;
 
-use PhpOffice\PhpWord\SimpleType\Jc;
+use Shareforce\PhpWord\SimpleType\Jc;
 
 /**
- * Test class for PhpOffice\PhpWord\Style\Image
+ * Test class for Shareforce\PhpWord\Style\Image
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Style\Image
+ * @coversDefaultClass \Shareforce\PhpWord\Style\Image
  * @runTestsInSeparateProcesses
  */
 class TextBoxTest extends \PHPUnit\Framework\TestCase

@@ -15,16 +15,16 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\Word2007\Part;
+namespace Shareforce\PhpWord\Writer\Word2007\Part;
 
-use PhpOffice\PhpWord\Shared\XMLWriter;
-use PhpOffice\PhpWord\Style;
-use PhpOffice\PhpWord\Style\Font as FontStyle;
-use PhpOffice\PhpWord\Style\Paragraph as ParagraphStyle;
-use PhpOffice\PhpWord\Style\Table as TableStyle;
-use PhpOffice\PhpWord\Writer\Word2007\Style\Font as FontStyleWriter;
-use PhpOffice\PhpWord\Writer\Word2007\Style\Paragraph as ParagraphStyleWriter;
-use PhpOffice\PhpWord\Writer\Word2007\Style\Table as TableStyleWriter;
+use Shareforce\PhpWord\Shared\XMLWriter;
+use Shareforce\PhpWord\Style;
+use Shareforce\PhpWord\Style\Font as FontStyle;
+use Shareforce\PhpWord\Style\Paragraph as ParagraphStyle;
+use Shareforce\PhpWord\Style\Table as TableStyle;
+use Shareforce\PhpWord\Writer\Word2007\Style\Font as FontStyleWriter;
+use Shareforce\PhpWord\Writer\Word2007\Style\Paragraph as ParagraphStyleWriter;
+use Shareforce\PhpWord\Writer\Word2007\Style\Table as TableStyleWriter;
 
 /**
  * Word2007 styles part writer: word/styles.xml
@@ -76,8 +76,8 @@ class Styles extends AbstractPart
     /**
      * Write default font and other default styles.
      *
-     * @param \PhpOffice\PhpWord\Shared\XMLWriter $xmlWriter
-     * @param \PhpOffice\PhpWord\Style\AbstractStyle[] $styles
+     * @param \Shareforce\PhpWord\Shared\XMLWriter $xmlWriter
+     * @param \Shareforce\PhpWord\Style\AbstractStyle[] $styles
      */
     private function writeDefaultStyles(XMLWriter $xmlWriter, $styles)
     {
@@ -161,9 +161,9 @@ class Styles extends AbstractPart
     /**
      * Write font style.
      *
-     * @param \PhpOffice\PhpWord\Shared\XMLWriter $xmlWriter
+     * @param \Shareforce\PhpWord\Shared\XMLWriter $xmlWriter
      * @param string $styleName
-     * @param \PhpOffice\PhpWord\Style\Font $style
+     * @param \Shareforce\PhpWord\Style\Font $style
      */
     private function writeFontStyle(XMLWriter $xmlWriter, $styleName, FontStyle $style)
     {
@@ -229,9 +229,9 @@ class Styles extends AbstractPart
     /**
      * Write paragraph style.
      *
-     * @param \PhpOffice\PhpWord\Shared\XMLWriter $xmlWriter
+     * @param \Shareforce\PhpWord\Shared\XMLWriter $xmlWriter
      * @param string $styleName
-     * @param \PhpOffice\PhpWord\Style\Paragraph $style
+     * @param \Shareforce\PhpWord\Style\Paragraph $style
      */
     private function writeParagraphStyle(XMLWriter $xmlWriter, $styleName, ParagraphStyle $style)
     {
@@ -261,9 +261,9 @@ class Styles extends AbstractPart
     /**
      * Write table style.
      *
-     * @param \PhpOffice\PhpWord\Shared\XMLWriter $xmlWriter
+     * @param \Shareforce\PhpWord\Shared\XMLWriter $xmlWriter
      * @param string $styleName
-     * @param \PhpOffice\PhpWord\Style\Table $style
+     * @param \Shareforce\PhpWord\Style\Table $style
      */
     private function writeTableStyle(XMLWriter $xmlWriter, $styleName, TableStyle $style)
     {

@@ -15,9 +15,9 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\ODText\Element;
+namespace Shareforce\PhpWord\Writer\ODText\Element;
 
-use PhpOffice\PhpWord\Writer\Word2007\Element\AbstractElement as Word2007AbstractElement;
+use Shareforce\PhpWord\Writer\Word2007\Element\AbstractElement as Word2007AbstractElement;
 
 /**
  * Abstract element writer

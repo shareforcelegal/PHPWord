@@ -15,9 +15,9 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Element;
+namespace Shareforce\PhpWord\Element;
 
-use PhpOffice\PhpWord\Style\Line as LineStyle;
+use Shareforce\PhpWord\Style\Line as LineStyle;
 
 /**
  * Line element
@@ -27,7 +27,7 @@ class Line extends AbstractElement
     /**
      * Line style
      *
-     * @var \PhpOffice\PhpWord\Style\Line
+     * @var \Shareforce\PhpWord\Style\Line
      */
     private $style;
 
@@ -44,7 +44,7 @@ class Line extends AbstractElement
     /**
      * Get line style
      *
-     * @return \PhpOffice\PhpWord\Style\Line
+     * @return \Shareforce\PhpWord\Style\Line
      */
     public function getStyle()
     {

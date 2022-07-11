@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\RTF;
+namespace Shareforce\PhpWord\Writer\RTF;
 
-use PhpOffice\PhpWord\Writer\RTF;
+use Shareforce\PhpWord\Writer\RTF;
 
 /**
- * Test class for PhpOffice\PhpWord\Writer\RTF\Element subnamespace
+ * Test class for Shareforce\PhpWord\Writer\RTF\Element subnamespace
  */
 class ElementTest extends \PHPUnit\Framework\TestCase
 {
@@ -36,9 +36,9 @@ class ElementTest extends \PHPUnit\Framework\TestCase
     {
         $elements = array('Container', 'Text', 'Title', 'Link', 'Image', 'Table', 'Field');
         foreach ($elements as $element) {
-            $objectClass = 'PhpOffice\\PhpWord\\Writer\\RTF\\Element\\' . $element;
+            $objectClass = 'Shareforce\\PhpWord\\Writer\\RTF\\Element\\' . $element;
             $parentWriter = new RTF();
-            $newElement = new \PhpOffice\PhpWord\Element\PageBreak();
+            $newElement = new \Shareforce\PhpWord\Element\PageBreak();
             $object = new $objectClass($parentWriter, $newElement);
 
             $this->assertEquals('', $object->write());
@@ -48,8 +48,8 @@ class ElementTest extends \PHPUnit\Framework\TestCase
     public function testPageField()
     {
         $parentWriter = new RTF();
-        $element = new \PhpOffice\PhpWord\Element\Field('PAGE');
-        $field = new \PhpOffice\PhpWord\Writer\RTF\Element\Field($parentWriter, $element);
+        $element = new \Shareforce\PhpWord\Element\Field('PAGE');
+        $field = new \Shareforce\PhpWord\Writer\RTF\Element\Field($parentWriter, $element);
 
         $this->assertEquals("{\\field{\\*\\fldinst PAGE}{\\fldrslt}}\\par\n", $this->removeCr($field));
     }
@@ -57,8 +57,8 @@ class ElementTest extends \PHPUnit\Framework\TestCase
     public function testNumpageField()
     {
         $parentWriter = new RTF();
-        $element = new \PhpOffice\PhpWord\Element\Field('NUMPAGES');
-        $field = new \PhpOffice\PhpWord\Writer\RTF\Element\Field($parentWriter, $element);
+        $element = new \Shareforce\PhpWord\Element\Field('NUMPAGES');
+        $field = new \Shareforce\PhpWord\Writer\RTF\Element\Field($parentWriter, $element);
 
         $this->assertEquals("{\\field{\\*\\fldinst NUMPAGES}{\\fldrslt}}\\par\n", $this->removeCr($field));
     }
@@ -66,8 +66,8 @@ class ElementTest extends \PHPUnit\Framework\TestCase
     public function testDateField()
     {
         $parentWriter = new RTF();
-        $element = new \PhpOffice\PhpWord\Element\Field('DATE', array('dateformat' => 'd MM yyyy H:mm:ss'));
-        $field = new \PhpOffice\PhpWord\Writer\RTF\Element\Field($parentWriter, $element);
+        $element = new \Shareforce\PhpWord\Element\Field('DATE', array('dateformat' => 'd MM yyyy H:mm:ss'));
+        $field = new \Shareforce\PhpWord\Writer\RTF\Element\Field($parentWriter, $element);
 
         $this->assertEquals("{\\field{\\*\\fldinst DATE \\\\@ \"d MM yyyy H:mm:ss\"}{\\fldrslt}}\\par\n", $this->removeCr($field));
     }
@@ -75,8 +75,8 @@ class ElementTest extends \PHPUnit\Framework\TestCase
     public function testIndexField()
     {
         $parentWriter = new RTF();
-        $element = new \PhpOffice\PhpWord\Element\Field('INDEX');
-        $field = new \PhpOffice\PhpWord\Writer\RTF\Element\Field($parentWriter, $element);
+        $element = new \Shareforce\PhpWord\Element\Field('INDEX');
+        $field = new \Shareforce\PhpWord\Writer\RTF\Element\Field($parentWriter, $element);
 
         $this->assertEquals("{}\\par\n", $this->removeCr($field));
     }
@@ -84,7 +84,7 @@ class ElementTest extends \PHPUnit\Framework\TestCase
     public function testTable()
     {
         $parentWriter = new RTF();
-        $element = new \PhpOffice\PhpWord\Element\Table();
+        $element = new \Shareforce\PhpWord\Element\Table();
         $width = 100;
         $width2 = 2 * $width;
         $element->addRow();
@@ -97,7 +97,7 @@ class ElementTest extends \PHPUnit\Framework\TestCase
         $tce->addText('3');
         $tce = $element->addCell($width);
         $tce->addText('4');
-        $table = new \PhpOffice\PhpWord\Writer\RTF\Element\Table($parentWriter, $element);
+        $table = new \Shareforce\PhpWord\Writer\RTF\Element\Table($parentWriter, $element);
         $expect = implode("\n", array(
             '\\pard',
             "\\trowd \\cellx$width \\cellx$width2 ",
@@ -126,10 +126,10 @@ class ElementTest extends \PHPUnit\Framework\TestCase
     public function testTextRun()
     {
         $parentWriter = new RTF();
-        $element = new \PhpOffice\PhpWord\Element\TextRun();
+        $element = new \Shareforce\PhpWord\Element\TextRun();
         $element->addText('Hello ');
         $element->addText('there.');
-        $textrun = new \PhpOffice\PhpWord\Writer\RTF\Element\TextRun($parentWriter, $element);
+        $textrun = new \Shareforce\PhpWord\Writer\RTF\Element\TextRun($parentWriter, $element);
         $expect = "\\pard\\nowidctlpar {{\\cf0\\f0 Hello }{\\cf0\\f0 there.}}\\par\n";
         $this->assertEquals($expect, $this->removeCr($textrun));
     }
@@ -137,10 +137,10 @@ class ElementTest extends \PHPUnit\Framework\TestCase
     public function testTextRunParagraphStyle()
     {
         $parentWriter = new RTF();
-        $element = new \PhpOffice\PhpWord\Element\TextRun(array('spaceBefore' => 0, 'spaceAfter' => 0));
+        $element = new \Shareforce\PhpWord\Element\TextRun(array('spaceBefore' => 0, 'spaceAfter' => 0));
         $element->addText('Hello ');
         $element->addText('there.');
-        $textrun = new \PhpOffice\PhpWord\Writer\RTF\Element\TextRun($parentWriter, $element);
+        $textrun = new \Shareforce\PhpWord\Writer\RTF\Element\TextRun($parentWriter, $element);
         $expect = "\\pard\\nowidctlpar \\sb0\\sa0{{\\cf0\\f0 Hello }{\\cf0\\f0 there.}}\\par\n";
         $this->assertEquals($expect, $this->removeCr($textrun));
     }
@@ -148,11 +148,11 @@ class ElementTest extends \PHPUnit\Framework\TestCase
     public function testTitle()
     {
         $parentWriter = new RTF();
-        $phpWord = new \PhpOffice\PhpWord\PhpWord();
+        $phpWord = new \Shareforce\PhpWord\PhpWord();
         $phpWord->addTitleStyle(1, array(), array('spaceBefore' => 0, 'spaceAfter' => 0));
         $section = $phpWord->addSection();
         $element = $section->addTitle('First Heading', 1);
-        $elwrite = new \PhpOffice\PhpWord\Writer\RTF\Element\Title($parentWriter, $element);
+        $elwrite = new \Shareforce\PhpWord\Writer\RTF\Element\Title($parentWriter, $element);
         $expect = "\\pard\\nowidctlpar \\sb0\\sa0{\\outlinelevel0{\\cf0\\f0 First Heading}\\par\n}";
         $this->assertEquals($expect, $this->removeCr($elwrite));
     }

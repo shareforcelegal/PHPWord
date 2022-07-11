@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord;
+namespace Shareforce\PhpWord;
 
 /**
- * Test class for PhpOffice\PhpWord\Settings
+ * Test class for Shareforce\PhpWord\Settings
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Settings
+ * @coversDefaultClass \Shareforce\PhpWord\Settings
  * @runTestsInSeparateProcesses
  */
 class SettingsTest extends \PHPUnit\Framework\TestCase

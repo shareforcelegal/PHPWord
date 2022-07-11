@@ -15,9 +15,9 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\RTF\Style;
+namespace Shareforce\PhpWord\Writer\RTF\Style;
 
-use PhpOffice\PhpWord\SimpleType\Jc;
+use Shareforce\PhpWord\SimpleType\Jc;
 
 /**
  * RTF paragraph style writer
@@ -43,7 +43,7 @@ class Paragraph extends AbstractStyle
     public function write()
     {
         $style = $this->getStyle();
-        if (!$style instanceof \PhpOffice\PhpWord\Style\Paragraph) {
+        if (!$style instanceof \Shareforce\PhpWord\Style\Paragraph) {
             return '';
         }
 
@@ -83,14 +83,14 @@ class Paragraph extends AbstractStyle
     }
 
     /**
-     * Writes an \PhpOffice\PhpWord\Style\Indentation
+     * Writes an \Shareforce\PhpWord\Style\Indentation
      *
-     * @param null|\PhpOffice\PhpWord\Style\Indentation $indent
+     * @param null|\Shareforce\PhpWord\Style\Indentation $indent
      * @return string
      */
     private function writeIndentation($indent = null)
     {
-        if (isset($indent) && $indent instanceof \PhpOffice\PhpWord\Style\Indentation) {
+        if (isset($indent) && $indent instanceof \Shareforce\PhpWord\Style\Indentation) {
             $writer = new Indentation($indent);
 
             return $writer->write();
@@ -102,7 +102,7 @@ class Paragraph extends AbstractStyle
     /**
      * Writes tabs
      *
-     * @param \PhpOffice\PhpWord\Style\Tab[] $tabs
+     * @param \Shareforce\PhpWord\Style\Tab[] $tabs
      * @return string
      */
     private function writeTabs($tabs = null)

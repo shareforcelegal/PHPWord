@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Style;
+namespace Shareforce\PhpWord\Style;
 
 /**
- * Test class for PhpOffice\PhpWord\Style\TOC
+ * Test class for Shareforce\PhpWord\Style\TOC
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Style\TOC
+ * @coversDefaultClass \Shareforce\PhpWord\Style\TOC
  */
 class TOCTest extends \PHPUnit\Framework\TestCase
 {

@@ -15,7 +15,7 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Style;
+namespace Shareforce\PhpWord\Style;
 
 /**
  * Shape style
@@ -50,35 +50,35 @@ class Shape extends AbstractStyle
     /**
      * Frame
      *
-     * @var \PhpOffice\PhpWord\Style\Frame
+     * @var \Shareforce\PhpWord\Style\Frame
      */
     private $frame;
 
     /**
      * Fill
      *
-     * @var \PhpOffice\PhpWord\Style\Fill
+     * @var \Shareforce\PhpWord\Style\Fill
      */
     private $fill;
 
     /**
      * Outline
      *
-     * @var \PhpOffice\PhpWord\Style\Outline
+     * @var \Shareforce\PhpWord\Style\Outline
      */
     private $outline;
 
     /**
      * Shadow
      *
-     * @var \PhpOffice\PhpWord\Style\Shadow
+     * @var \Shareforce\PhpWord\Style\Shadow
      */
     private $shadow;
 
     /**
      * 3D extrusion
      *
-     * @var \PhpOffice\PhpWord\Style\Extrusion
+     * @var \Shareforce\PhpWord\Style\Extrusion
      */
     private $extrusion;
 
@@ -141,7 +141,7 @@ class Shape extends AbstractStyle
     /**
      * Get frame
      *
-     * @return \PhpOffice\PhpWord\Style\Frame
+     * @return \Shareforce\PhpWord\Style\Frame
      */
     public function getFrame()
     {
@@ -164,7 +164,7 @@ class Shape extends AbstractStyle
     /**
      * Get fill
      *
-     * @return \PhpOffice\PhpWord\Style\Fill
+     * @return \Shareforce\PhpWord\Style\Fill
      */
     public function getFill()
     {
@@ -187,7 +187,7 @@ class Shape extends AbstractStyle
     /**
      * Get outline
      *
-     * @return \PhpOffice\PhpWord\Style\Outline
+     * @return \Shareforce\PhpWord\Style\Outline
      */
     public function getOutline()
     {
@@ -210,7 +210,7 @@ class Shape extends AbstractStyle
     /**
      * Get shadow
      *
-     * @return \PhpOffice\PhpWord\Style\Shadow
+     * @return \Shareforce\PhpWord\Style\Shadow
      */
     public function getShadow()
     {
@@ -233,7 +233,7 @@ class Shape extends AbstractStyle
     /**
      * Get 3D extrusion
      *
-     * @return \PhpOffice\PhpWord\Style\Extrusion
+     * @return \Shareforce\PhpWord\Style\Extrusion
      */
     public function getExtrusion()
     {

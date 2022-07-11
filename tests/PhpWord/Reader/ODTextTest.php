@@ -15,14 +15,14 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Reader;
+namespace Shareforce\PhpWord\Reader;
 
-use PhpOffice\PhpWord\IOFactory;
+use Shareforce\PhpWord\IOFactory;
 
 /**
- * Test class for PhpOffice\PhpWord\Reader\ODText
+ * Test class for Shareforce\PhpWord\Reader\ODText
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Reader\ODText
+ * @coversDefaultClass \Shareforce\PhpWord\Reader\ODText
  * @runTestsInSeparateProcesses
  */
 class ODTextTest extends \PHPUnit\Framework\TestCase
@@ -34,6 +34,6 @@ class ODTextTest extends \PHPUnit\Framework\TestCase
     {
         $filename = __DIR__ . '/../_files/documents/reader.odt';
         $phpWord = IOFactory::load($filename, 'ODText');
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\PhpWord', $phpWord);
+        $this->assertInstanceOf('Shareforce\\PhpWord\\PhpWord', $phpWord);
     }
 }

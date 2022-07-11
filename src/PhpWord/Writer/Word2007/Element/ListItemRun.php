@@ -15,10 +15,10 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\Word2007\Element;
+namespace Shareforce\PhpWord\Writer\Word2007\Element;
 
-use PhpOffice\PhpWord\Element\ListItemRun as ListItemRunElement;
-use PhpOffice\PhpWord\Writer\Word2007\Style\Paragraph as ParagraphStyleWriter;
+use Shareforce\PhpWord\Element\ListItemRun as ListItemRunElement;
+use Shareforce\PhpWord\Writer\Word2007\Style\Paragraph as ParagraphStyleWriter;
 
 /**
  * ListItemRun element writer

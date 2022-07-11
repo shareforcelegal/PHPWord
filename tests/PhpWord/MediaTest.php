@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord;
+namespace Shareforce\PhpWord;
 
-use PhpOffice\PhpWord\Element\Image;
+use Shareforce\PhpWord\Element\Image;
 
 /**
- * Test class for PhpOffice\PhpWord\Media
+ * Test class for Shareforce\PhpWord\Media
  *
  * @runTestsInSeparateProcesses
  */

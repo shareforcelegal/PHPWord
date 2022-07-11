@@ -1,11 +1,11 @@
 <?php
-use PhpOffice\PhpWord\SimpleType\DocProtect;
+use Shareforce\PhpWord\SimpleType\DocProtect;
 
 include_once 'Sample_Header.php';
 
 // New Word Document
 echo date('H:i:s') , ' Create new PhpWord object' , EOL;
-$phpWord = new \PhpOffice\PhpWord\PhpWord();
+$phpWord = new \Shareforce\PhpWord\PhpWord();
 
 $documentProtection = $phpWord->getSettings()->getDocumentProtection();
 $documentProtection->setEditing(DocProtect::READ_ONLY);

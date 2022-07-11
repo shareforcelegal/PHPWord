@@ -15,15 +15,15 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\Word2007\Style;
+namespace Shareforce\PhpWord\Writer\Word2007\Style;
 
-use PhpOffice\PhpWord\Settings;
-use PhpOffice\PhpWord\TestHelperDOCX;
+use Shareforce\PhpWord\Settings;
+use Shareforce\PhpWord\TestHelperDOCX;
 
 /**
- * Test class for PhpOffice\PhpWord\Writer\Word2007\Style\Section
+ * Test class for Shareforce\PhpWord\Writer\Word2007\Style\Section
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Writer\Word2007\Style\Section
+ * @coversDefaultClass \Shareforce\PhpWord\Writer\Word2007\Style\Section
  * @runTestsInSeparateProcesses
  */
 class SectionTest extends \PHPUnit\Framework\TestCase
@@ -39,9 +39,9 @@ class SectionTest extends \PHPUnit\Framework\TestCase
     public function testMarginInInches()
     {
         $unit = Settings::getMeasurementUnit();
-        Settings::setMeasurementUnit(\PhpOffice\PhpWord\Settings::UNIT_INCH);
+        Settings::setMeasurementUnit(\Shareforce\PhpWord\Settings::UNIT_INCH);
 
-        $phpWord = new \PhpOffice\PhpWord\PhpWord();
+        $phpWord = new \Shareforce\PhpWord\PhpWord();
         $section = $phpWord->addSection();
         $section->getStyle()->setMarginTop(0.1)->setMarginBottom(0.4)->setMarginLeft(0.2)->setMarginRight(0.3);
         $section->addText('test');

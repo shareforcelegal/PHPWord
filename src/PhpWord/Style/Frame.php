@@ -15,9 +15,9 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Style;
+namespace Shareforce\PhpWord\Style;
 
-use PhpOffice\PhpWord\SimpleType\Jc;
+use Shareforce\PhpWord\SimpleType\Jc;
 
 /**
  * Frame defines the size and position of an object

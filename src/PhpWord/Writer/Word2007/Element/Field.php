@@ -15,7 +15,7 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\Word2007\Element;
+namespace Shareforce\PhpWord\Writer\Word2007\Element;
 
 /**
  * Field element writer
@@ -30,7 +30,7 @@ class Field extends Text
     public function write()
     {
         $element = $this->getElement();
-        if (!$element instanceof \PhpOffice\PhpWord\Element\Field) {
+        if (!$element instanceof \Shareforce\PhpWord\Element\Field) {
             return;
         }
 
@@ -42,7 +42,7 @@ class Field extends Text
         }
     }
 
-    private function writeDefault(\PhpOffice\PhpWord\Element\Field $element)
+    private function writeDefault(\Shareforce\PhpWord\Element\Field $element)
     {
         $xmlWriter = $this->getXmlWriter();
         $this->startElementP();
@@ -73,7 +73,7 @@ class Field extends Text
         $xmlWriter->endElement(); // w:r
 
         if ($element->getText() != null) {
-            if ($element->getText() instanceof \PhpOffice\PhpWord\Element\TextRun) {
+            if ($element->getText() instanceof \Shareforce\PhpWord\Element\TextRun) {
                 $containerWriter = new Container($xmlWriter, $element->getText(), true);
                 $containerWriter->write();
 
@@ -119,9 +119,9 @@ class Field extends Text
      * Writes a macrobutton field
      *
      * //TODO A lot of code duplication with general method, should maybe be refactored
-     * @param \PhpOffice\PhpWord\Element\Field $element
+     * @param \Shareforce\PhpWord\Element\Field $element
      */
-    protected function writeMacrobutton(\PhpOffice\PhpWord\Element\Field $element)
+    protected function writeMacrobutton(\Shareforce\PhpWord\Element\Field $element)
     {
         $xmlWriter = $this->getXmlWriter();
         $this->startElementP();
@@ -145,7 +145,7 @@ class Field extends Text
         $xmlWriter->endElement(); // w:r
 
         if ($element->getText() != null) {
-            if ($element->getText() instanceof \PhpOffice\PhpWord\Element\TextRun) {
+            if ($element->getText() instanceof \Shareforce\PhpWord\Element\TextRun) {
                 $containerWriter = new Container($xmlWriter, $element->getText(), true);
                 $containerWriter->write();
             }
@@ -160,7 +160,7 @@ class Field extends Text
         $this->endElementP(); // w:p
     }
 
-    private function buildPropertiesAndOptions(\PhpOffice\PhpWord\Element\Field $element)
+    private function buildPropertiesAndOptions(\Shareforce\PhpWord\Element\Field $element)
     {
         $propertiesAndOptions = '';
         $properties = $element->getProperties();
@@ -211,5 +211,107 @@ class Field extends Text
         }
 
         return $propertiesAndOptions;
+    }
+
+    /**
+     * Writes a REF field
+     *
+     * @param \Shareforce\PhpWord\Element\Field $element
+     */
+    protected function writeRef(\Shareforce\PhpWord\Element\Field $element)
+    {
+        $xmlWriter = $this->getXmlWriter();
+        $this->startElementP();
+
+        $xmlWriter->startElement('w:r');
+        $xmlWriter->startElement('w:fldChar');
+        $xmlWriter->writeAttribute('w:fldCharType', 'begin');
+        $xmlWriter->endElement(); // w:fldChar
+        $xmlWriter->endElement(); // w:r
+
+        $instruction = ' ' . $element->getType() . ' ';
+
+        foreach ($element->getProperties() as $property) {
+            $instruction .= $property . ' ';
+        }
+        foreach ($element->getOptions() as $optionKey => $optionValue) {
+            $instruction .= $this->convertRefOption($optionKey, $optionValue) . ' ';
+        }
+
+        $xmlWriter->startElement('w:r');
+        $this->writeFontStyle();
+        $xmlWriter->startElement('w:instrText');
+        $xmlWriter->writeAttribute('xml:space', 'preserve');
+        $xmlWriter->text($instruction);
+        $xmlWriter->endElement(); // w:instrText
+        $xmlWriter->endElement(); // w:r
+
+        if ($element->getText() != null) {
+            if ($element->getText() instanceof \Shareforce\PhpWord\Element\TextRun) {
+                $containerWriter = new Container($xmlWriter, $element->getText(), true);
+                $containerWriter->write();
+
+                $xmlWriter->startElement('w:r');
+                $xmlWriter->startElement('w:instrText');
+                $xmlWriter->text('"' . $this->buildPropertiesAndOptions($element));
+                $xmlWriter->endElement(); // w:instrText
+                $xmlWriter->endElement(); // w:r
+
+                $xmlWriter->startElement('w:r');
+                $xmlWriter->startElement('w:instrText');
+                $xmlWriter->writeAttribute('xml:space', 'preserve');
+                $xmlWriter->text(' ');
+                $xmlWriter->endElement(); // w:instrText
+                $xmlWriter->endElement(); // w:r
+            }
+        }
+
+        $xmlWriter->startElement('w:r');
+        $xmlWriter->startElement('w:fldChar');
+        $xmlWriter->writeAttribute('w:fldCharType', 'separate');
+        $xmlWriter->endElement(); // w:fldChar
+        $xmlWriter->endElement(); // w:r
+
+        $xmlWriter->startElement('w:r');
+        $xmlWriter->startElement('w:rPr');
+        $xmlWriter->startElement('w:noProof');
+        $xmlWriter->endElement(); // w:noProof
+        $xmlWriter->endElement(); // w:rPr
+        $xmlWriter->writeElement('w:t', $element->getText() != null && is_string($element->getText()) ? $element->getText() : '1');
+        $xmlWriter->endElement(); // w:r
+
+        $xmlWriter->startElement('w:r');
+        $xmlWriter->startElement('w:fldChar');
+        $xmlWriter->writeAttribute('w:fldCharType', 'end');
+        $xmlWriter->endElement(); // w:fldChar
+        $xmlWriter->endElement(); // w:r
+
+        $this->endElementP(); // w:p
+    }
+
+    private function convertRefOption($optionKey, $optionValue)
+    {
+        if ($optionKey === 'NumberSeperatorSequence') {
+            return '\\d ' . $optionValue;
+        }
+
+        switch ($optionValue) {
+            case 'IncrementAndInsertText':
+                return '\\f';
+            case 'CreateHyperLink':
+                return '\\h';
+            case 'NoTrailingPeriod':
+                return '\\n';
+            case 'IncludeAboveOrBelow':
+                return '\\p';
+            case 'InsertParagraphNumberRelativeContext':
+                return '\\r';
+            case 'SuppressNonDelimiterNonNumericalText':
+                return '\\t';
+            case 'InsertParagraphNumberFullContext':
+                return '\\w';
+            default:
+                return '';
+        }
     }
 }

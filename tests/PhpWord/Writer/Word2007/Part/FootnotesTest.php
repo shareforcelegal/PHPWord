@@ -15,11 +15,11 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\Word2007\Part;
+namespace Shareforce\PhpWord\Writer\Word2007\Part;
 
-use PhpOffice\PhpWord\PhpWord;
-use PhpOffice\PhpWord\SimpleType\Jc;
-use PhpOffice\PhpWord\TestHelperDOCX;
+use Shareforce\PhpWord\PhpWord;
+use Shareforce\PhpWord\SimpleType\Jc;
+use Shareforce\PhpWord\TestHelperDOCX;
 
 /**
  * @coversNothing

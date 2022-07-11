@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Element;
+namespace Shareforce\PhpWord\Element;
 
 /**
- * Test class for PhpOffice\PhpWord\Element\OLEObject
+ * Test class for Shareforce\PhpWord\Element\OLEObject
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Element\OLEObject
+ * @coversDefaultClass \Shareforce\PhpWord\Element\OLEObject
  * @runTestsInSeparateProcesses
  */
 class ObjectTest extends \PHPUnit\Framework\TestCase
@@ -33,8 +33,8 @@ class ObjectTest extends \PHPUnit\Framework\TestCase
         $src = __DIR__ . '/../_files/documents/reader.docx';
         $oObject = new OLEObject($src);
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\OLEObject', $oObject);
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Style\\Image', $oObject->getStyle());
+        $this->assertInstanceOf('Shareforce\\PhpWord\\Element\\OLEObject', $oObject);
+        $this->assertInstanceOf('Shareforce\\PhpWord\\Style\\Image', $oObject->getStyle());
         $this->assertEquals($src, $oObject->getSource());
     }
 
@@ -46,15 +46,15 @@ class ObjectTest extends \PHPUnit\Framework\TestCase
         $src = __DIR__ . '/../_files/documents/sheet.xls';
         $oObject = new OLEObject($src);
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\OLEObject', $oObject);
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Style\\Image', $oObject->getStyle());
+        $this->assertInstanceOf('Shareforce\\PhpWord\\Element\\OLEObject', $oObject);
+        $this->assertInstanceOf('Shareforce\\PhpWord\\Style\\Image', $oObject->getStyle());
         $this->assertEquals($src, $oObject->getSource());
     }
 
     /**
      * Create new instance with non-supported files
      *
-     * @expectedException \PhpOffice\PhpWord\Exception\InvalidObjectException
+     * @expectedException \Shareforce\PhpWord\Exception\InvalidObjectException
      */
     public function testConstructWithNotSupportedFiles()
     {
@@ -71,8 +71,8 @@ class ObjectTest extends \PHPUnit\Framework\TestCase
         $src = __DIR__ . '/../_files/documents/sheet.xls';
         $oObject = new OLEObject($src, array('width' => '230px'));
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Element\\OLEObject', $oObject);
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Style\\Image', $oObject->getStyle());
+        $this->assertInstanceOf('Shareforce\\PhpWord\\Element\\OLEObject', $oObject);
+        $this->assertInstanceOf('Shareforce\\PhpWord\\Style\\Image', $oObject->getStyle());
         $this->assertEquals($src, $oObject->getSource());
     }
 

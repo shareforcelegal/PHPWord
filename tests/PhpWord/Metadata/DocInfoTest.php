@@ -15,10 +15,10 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Metadata;
+namespace Shareforce\PhpWord\Metadata;
 
 /**
- * Test class for PhpOffice\PhpWord\Metadata\DocInfo
+ * Test class for Shareforce\PhpWord\Metadata\DocInfo
  *
  * @runTestsInSeparateProcesses
  */

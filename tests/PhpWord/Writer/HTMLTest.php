@@ -15,15 +15,15 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer;
+namespace Shareforce\PhpWord\Writer;
 
-use PhpOffice\PhpWord\AbstractWebServerEmbeddedTest;
-use PhpOffice\PhpWord\PhpWord;
-use PhpOffice\PhpWord\Settings;
-use PhpOffice\PhpWord\SimpleType\Jc;
+use Shareforce\PhpWord\AbstractWebServerEmbeddedTest;
+use Shareforce\PhpWord\PhpWord;
+use Shareforce\PhpWord\Settings;
+use Shareforce\PhpWord\SimpleType\Jc;
 
 /**
- * Test class for PhpOffice\PhpWord\Writer\HTML
+ * Test class for Shareforce\PhpWord\Writer\HTML
  *
  * @runTestsInSeparateProcesses
  */
@@ -36,13 +36,13 @@ class HTMLTest extends AbstractWebServerEmbeddedTest
     {
         $object = new HTML(new PhpWord());
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\PhpWord', $object->getPhpWord());
+        $this->assertInstanceOf('Shareforce\\PhpWord\\PhpWord', $object->getPhpWord());
     }
 
     /**
      * Construct with null
      *
-     * @expectedException \PhpOffice\PhpWord\Exception\Exception
+     * @expectedException \Shareforce\PhpWord\Exception\Exception
      * @expectedExceptionMessage No PhpWord assigned.
      */
     public function testConstructWithNull()

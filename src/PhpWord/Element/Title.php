@@ -15,10 +15,10 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Element;
+namespace Shareforce\PhpWord\Element;
 
-use PhpOffice\PhpWord\Shared\Text as SharedText;
-use PhpOffice\PhpWord\Style;
+use Shareforce\PhpWord\Shared\Text as SharedText;
+use Shareforce\PhpWord\Style;
 
 /**
  * Title element

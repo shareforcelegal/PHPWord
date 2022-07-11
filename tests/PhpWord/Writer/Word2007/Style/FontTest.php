@@ -15,14 +15,14 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\Word2007\Style;
+namespace Shareforce\PhpWord\Writer\Word2007\Style;
 
-use PhpOffice\PhpWord\TestHelperDOCX;
+use Shareforce\PhpWord\TestHelperDOCX;
 
 /**
- * Test class for PhpOffice\PhpWord\Writer\Word2007\Style\Font
+ * Test class for Shareforce\PhpWord\Writer\Word2007\Style\Font
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Writer\Word2007\Style\Font
+ * @coversDefaultClass \Shareforce\PhpWord\Writer\Word2007\Style\Font
  * @runTestsInSeparateProcesses
  */
 class FontTest extends \PHPUnit\Framework\TestCase
@@ -40,7 +40,7 @@ class FontTest extends \PHPUnit\Framework\TestCase
      */
     public function testFontRTL()
     {
-        $phpWord = new \PhpOffice\PhpWord\PhpWord();
+        $phpWord = new \Shareforce\PhpWord\PhpWord();
         $section = $phpWord->addSection();
         $textrun = $section->addTextRun();
         $textrun->addText('سلام این یک پاراگراف راست به چپ است', array('rtl' => true, 'lang' => 'ar-DZ'));
@@ -53,7 +53,7 @@ class FontTest extends \PHPUnit\Framework\TestCase
 
     public function testFontRTLNamed()
     {
-        $phpWord = new \PhpOffice\PhpWord\PhpWord();
+        $phpWord = new \Shareforce\PhpWord\PhpWord();
         $stnam = 'fstyle';
         $phpWord->addFontStyle($stnam, array(
             'rtl'  => true,
@@ -78,7 +78,7 @@ class FontTest extends \PHPUnit\Framework\TestCase
 
     public function testFontNotRTLNamed()
     {
-        $phpWord = new \PhpOffice\PhpWord\PhpWord();
+        $phpWord = new \Shareforce\PhpWord\PhpWord();
         $stnam = 'fstyle';
         $phpWord->addFontStyle($stnam, array(
             //'rtl'  => true,
@@ -103,7 +103,7 @@ class FontTest extends \PHPUnit\Framework\TestCase
 
     public function testNoProof()
     {
-        $phpWord = new \PhpOffice\PhpWord\PhpWord();
+        $phpWord = new \Shareforce\PhpWord\PhpWord();
         $fontStyle = array(
             'noProof' => true,
             'name'    => 'Courier New',
@@ -130,9 +130,9 @@ class FontTest extends \PHPUnit\Framework\TestCase
      */
     public function testFontWithLang()
     {
-        $phpWord = new \PhpOffice\PhpWord\PhpWord();
+        $phpWord = new \Shareforce\PhpWord\PhpWord();
         $section = $phpWord->addSection();
-        $section->addText('Ce texte-ci est en français.', array('lang' => \PhpOffice\PhpWord\Style\Language::FR_BE));
+        $section->addText('Ce texte-ci est en français.', array('lang' => \Shareforce\PhpWord\Style\Language::FR_BE));
         $doc = TestHelperDOCX::getDocument($phpWord, 'Word2007');
 
         $file = 'word/document.xml';
@@ -145,7 +145,7 @@ class FontTest extends \PHPUnit\Framework\TestCase
      */
     public function testPosition()
     {
-        $phpWord = new \PhpOffice\PhpWord\PhpWord();
+        $phpWord = new \Shareforce\PhpWord\PhpWord();
         $section = $phpWord->addSection();
         $section->addText('This text is lowered', array('position' => -20));
         $doc = TestHelperDOCX::getDocument($phpWord, 'Word2007');

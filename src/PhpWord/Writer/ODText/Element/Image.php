@@ -15,9 +15,9 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\ODText\Element;
+namespace Shareforce\PhpWord\Writer\ODText\Element;
 
-use PhpOffice\PhpWord\Shared\Converter;
+use Shareforce\PhpWord\Shared\Converter;
 
 /**
  * Image element writer
@@ -33,7 +33,7 @@ class Image extends AbstractElement
     {
         $xmlWriter = $this->getXmlWriter();
         $element = $this->getElement();
-        if (!$element instanceof \PhpOffice\PhpWord\Element\Image) {
+        if (!$element instanceof \Shareforce\PhpWord\Element\Image) {
             return;
         }
 

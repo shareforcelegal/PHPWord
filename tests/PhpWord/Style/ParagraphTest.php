@@ -15,14 +15,14 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Style;
+namespace Shareforce\PhpWord\Style;
 
-use PhpOffice\PhpWord\PhpWord;
-use PhpOffice\PhpWord\SimpleType\LineSpacingRule;
-use PhpOffice\PhpWord\TestHelperDOCX;
+use Shareforce\PhpWord\PhpWord;
+use Shareforce\PhpWord\SimpleType\LineSpacingRule;
+use Shareforce\PhpWord\TestHelperDOCX;
 
 /**
- * Test class for PhpOffice\PhpWord\Style\Paragraph
+ * Test class for Shareforce\PhpWord\Style\Paragraph
  *
  * @runTestsInSeparateProcesses
  */
@@ -178,7 +178,7 @@ class ParagraphTest extends \PHPUnit\Framework\TestCase
     /**
      * Test line height exception by using nonnumeric value
      *
-     * @expectedException \PhpOffice\PhpWord\Exception\InvalidStyleException
+     * @expectedException \Shareforce\PhpWord\Exception\InvalidStyleException
      */
     public function testLineHeightException()
     {

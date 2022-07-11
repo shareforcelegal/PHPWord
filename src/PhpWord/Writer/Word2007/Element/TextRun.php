@@ -15,7 +15,7 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\Word2007\Element;
+namespace Shareforce\PhpWord\Writer\Word2007\Element;
 
 /**
  * TextRun element writer

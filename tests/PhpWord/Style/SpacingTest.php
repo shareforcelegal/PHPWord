@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Style;
+namespace Shareforce\PhpWord\Style;
 
 /**
- * Test class for PhpOffice\PhpWord\Style\Spacing
+ * Test class for Shareforce\PhpWord\Style\Spacing
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Style\Spacing
+ * @coversDefaultClass \Shareforce\PhpWord\Style\Spacing
  */
 class SpacingTest extends \PHPUnit\Framework\TestCase
 {

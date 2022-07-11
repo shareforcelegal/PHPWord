@@ -15,14 +15,14 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Style;
+namespace Shareforce\PhpWord\Style;
 
-use PhpOffice\PhpWord\SimpleType\VerticalJc;
+use Shareforce\PhpWord\SimpleType\VerticalJc;
 
 /**
- * Test class for PhpOffice\PhpWord\Style\Section
+ * Test class for Shareforce\PhpWord\Style\Section
  *
- * @coversDefaultClass \PhpOffice\PhpWord\Element\Section
+ * @coversDefaultClass \Shareforce\PhpWord\Element\Section
  * @runTestsInSeparateProcesses
  */
 class SectionTest extends \PHPUnit\Framework\TestCase
@@ -73,7 +73,7 @@ class SectionTest extends \PHPUnit\Framework\TestCase
                 'restart'   => 'newPage',
             )
         );
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Style\\LineNumbering', $oSettings->getLineNumbering());
+        $this->assertInstanceOf('Shareforce\\PhpWord\\Style\\LineNumbering', $oSettings->getLineNumbering());
 
         $oSettings->setSettingValue('lineNumbering', null);
         $this->assertNull($oSettings->getLineNumbering());
@@ -307,10 +307,10 @@ class SectionTest extends \PHPUnit\Framework\TestCase
         $this->assertEquals(720, $oSettings->getColsSpace());
 
         $iVal = rand(1, 1000);
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Style\\Section', $oSettings->setColsSpace($iVal));
+        $this->assertInstanceOf('Shareforce\\PhpWord\\Style\\Section', $oSettings->setColsSpace($iVal));
         $this->assertEquals($iVal, $oSettings->getColsSpace());
 
-        $this->assertInstanceOf('PhpOffice\\PhpWord\\Style\\Section', $oSettings->setColsSpace());
+        $this->assertInstanceOf('Shareforce\\PhpWord\\Style\\Section', $oSettings->setColsSpace());
         $this->assertEquals(720, $oSettings->getColsSpace());
     }
 

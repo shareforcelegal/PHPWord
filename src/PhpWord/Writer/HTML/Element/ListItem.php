@@ -15,9 +15,9 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\HTML\Element;
+namespace Shareforce\PhpWord\Writer\HTML\Element;
 
-use PhpOffice\PhpWord\Settings;
+use Shareforce\PhpWord\Settings;
 
 /**
  * ListItem element HTML writer
@@ -33,7 +33,7 @@ class ListItem extends AbstractElement
      */
     public function write()
     {
-        if (!$this->element instanceof \PhpOffice\PhpWord\Element\ListItem) {
+        if (!$this->element instanceof \Shareforce\PhpWord\Element\ListItem) {
             return '';
         }
 

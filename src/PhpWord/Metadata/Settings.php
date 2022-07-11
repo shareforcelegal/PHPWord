@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Metadata;
+namespace Shareforce\PhpWord\Metadata;
 
-use PhpOffice\PhpWord\ComplexType\ProofState;
-use PhpOffice\PhpWord\ComplexType\TrackChangesView;
-use PhpOffice\PhpWord\SimpleType\Zoom;
-use PhpOffice\PhpWord\Style\Language;
+use Shareforce\PhpWord\ComplexType\ProofState;
+use Shareforce\PhpWord\ComplexType\TrackChangesView;
+use Shareforce\PhpWord\SimpleType\Zoom;
+use Shareforce\PhpWord\Style\Language;
 
 /**
  * Setting class
@@ -34,7 +34,7 @@ class Settings
      * Magnification Setting
      *
      * @see  http://www.datypic.com/sc/ooxml/e-w_zoom-1.html
-     * @var mixed either integer, in which case it treated as a percent, or one of PhpOffice\PhpWord\SimpleType\Zoom
+     * @var mixed either integer, in which case it treated as a percent, or one of Shareforce\PhpWord\SimpleType\Zoom
      */
     private $zoom = 100;
 
@@ -91,14 +91,14 @@ class Settings
     /**
      * Spelling and Grammatical Checking State
      *
-     * @var \PhpOffice\PhpWord\ComplexType\ProofState
+     * @var \Shareforce\PhpWord\ComplexType\ProofState
      */
     private $proofState;
 
     /**
      * Document Editing Restrictions
      *
-     * @var \PhpOffice\PhpWord\Metadata\Protection
+     * @var \Shareforce\PhpWord\Metadata\Protection
      */
     private $documentProtection;
 
@@ -255,7 +255,7 @@ class Settings
     /**
      * Get the Visibility of Annotation Types
      *
-     * @return \PhpOffice\PhpWord\ComplexType\TrackChangesView
+     * @return \Shareforce\PhpWord\ComplexType\TrackChangesView
      */
     public function getRevisionView()
     {

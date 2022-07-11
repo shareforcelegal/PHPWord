@@ -15,10 +15,10 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\ODText\Style;
+namespace Shareforce\PhpWord\Writer\ODText\Style;
 
-use PhpOffice\PhpWord\PhpWord;
-use PhpOffice\PhpWord\TestHelperDOCX;
+use Shareforce\PhpWord\PhpWord;
+use Shareforce\PhpWord\TestHelperDOCX;
 
 /**
  * Test class for Headers, Footers, Tabs in ODT
@@ -38,8 +38,8 @@ class SectionTest extends \PHPUnit\Framework\TestCase
      */
     public function testHeaderFooterTabs()
     {
-        $phpWord = new \PhpOffice\PhpWord\PhpWord();
-        $margins = \PhpOffice\PhpWord\Shared\Converter::INCH_TO_TWIP;
+        $phpWord = new \Shareforce\PhpWord\PhpWord();
+        $margins = \Shareforce\PhpWord\Shared\Converter::INCH_TO_TWIP;
         $phpWord->addFontStyle('hdrstyle1', array('name' => 'Courier New', 'size' => 8));
         $section = $phpWord->addSection(array('paperSize' => 'Letter', 'marginTop' => $margins, 'marginBottom' => $margins));
         $header = $section->createHeader();
@@ -54,8 +54,8 @@ class SectionTest extends \PHPUnit\Framework\TestCase
             'footerTab',
             array(
                 'tabs' => array(
-                    new \PhpOffice\PhpWord\Style\Tab('center', (int) ($footerwidth / 2)),
-                    new \PhpOffice\PhpWord\Style\Tab('right', (int) $footerwidth),
+                    new \Shareforce\PhpWord\Style\Tab('center', (int) ($footerwidth / 2)),
+                    new \Shareforce\PhpWord\Style\Tab('right', (int) $footerwidth),
                 ),
             )
         );
@@ -151,8 +151,8 @@ class SectionTest extends \PHPUnit\Framework\TestCase
         $phpWord = new PhpWord();
         $phpWord->getSettings()->setHideGrammaticalErrors(true);
         $phpWord->getSettings()->setHideSpellingErrors(true);
-        $phpWord->getSettings()->setThemeFontLang(new \PhpOffice\PhpWord\Style\Language('en-US'));
-        $phpWord->getSettings()->getThemeFontLang()->setLangId(\PhpOffice\PhpWord\Style\Language::EN_US_ID);
+        $phpWord->getSettings()->setThemeFontLang(new \Shareforce\PhpWord\Style\Language('en-US'));
+        $phpWord->getSettings()->getThemeFontLang()->setLangId(\Shareforce\PhpWord\Style\Language::EN_US_ID);
         $section = $phpWord->addSection();
         $section->addText('Here is a paragraph with some speling errorz');
 

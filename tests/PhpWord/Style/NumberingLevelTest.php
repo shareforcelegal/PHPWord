@@ -15,12 +15,12 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Style;
+namespace Shareforce\PhpWord\Style;
 
-use PhpOffice\PhpWord\SimpleType\Jc;
+use Shareforce\PhpWord\SimpleType\Jc;
 
 /**
- * Test class for PhpOffice\PhpWord\Style\NumberingLevel
+ * Test class for Shareforce\PhpWord\Style\NumberingLevel
  *
  * @runTestsInSeparateProcesses
  */

@@ -15,10 +15,10 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Reader\Word2007;
+namespace Shareforce\PhpWord\Reader\Word2007;
 
-use PhpOffice\PhpWord\PhpWord;
-use PhpOffice\PhpWord\Shared\XMLReader;
+use Shareforce\PhpWord\PhpWord;
+use Shareforce\PhpWord\Shared\XMLReader;
 
 /**
  * Footnotes reader
@@ -44,7 +44,7 @@ class Footnotes extends AbstractPart
     /**
      * Read (footnotes|endnotes).xml.
      *
-     * @param \PhpOffice\PhpWord\PhpWord $phpWord
+     * @param \Shareforce\PhpWord\PhpWord $phpWord
      */
     public function read(PhpWord $phpWord)
     {
@@ -78,7 +78,7 @@ class Footnotes extends AbstractPart
      *
      * @param PhpWord $phpWord
      * @param int $relationId
-     * @return \PhpOffice\PhpWord\Element\AbstractContainer|null
+     * @return \Shareforce\PhpWord\Element\AbstractContainer|null
      */
     private function getElement(PhpWord $phpWord, $relationId)
     {

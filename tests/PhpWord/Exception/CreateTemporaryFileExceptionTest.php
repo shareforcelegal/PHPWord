@@ -15,11 +15,11 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Exception;
+namespace Shareforce\PhpWord\Exception;
 
 /**
- * @covers \PhpOffice\PhpWord\Exception\CreateTemporaryFileException
- * @coversDefaultClass \PhpOffice\PhpWord\Exception\CreateTemporaryFileException
+ * @covers \Shareforce\PhpWord\Exception\CreateTemporaryFileException
+ * @coversDefaultClass \Shareforce\PhpWord\Exception\CreateTemporaryFileException
  */
 class CreateTemporaryFileExceptionTest extends \PHPUnit\Framework\TestCase
 {
@@ -27,7 +27,7 @@ class CreateTemporaryFileExceptionTest extends \PHPUnit\Framework\TestCase
      * CreateTemporaryFileException can be thrown.
      *
      * @covers            ::__construct()
-     * @expectedException \PhpOffice\PhpWord\Exception\CreateTemporaryFileException
+     * @expectedException \Shareforce\PhpWord\Exception\CreateTemporaryFileException
      * @test
      */
     public function testCreateTemporaryFileExceptionCanBeThrown()

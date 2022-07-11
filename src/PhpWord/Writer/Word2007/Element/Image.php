@@ -15,14 +15,14 @@
  * @license     http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  */
 
-namespace PhpOffice\PhpWord\Writer\Word2007\Element;
+namespace Shareforce\PhpWord\Writer\Word2007\Element;
 
-use PhpOffice\PhpWord\Element\Image as ImageElement;
-use PhpOffice\PhpWord\Shared\XMLWriter;
-use PhpOffice\PhpWord\Style\Font as FontStyle;
-use PhpOffice\PhpWord\Style\Frame as FrameStyle;
-use PhpOffice\PhpWord\Writer\Word2007\Style\Font as FontStyleWriter;
-use PhpOffice\PhpWord\Writer\Word2007\Style\Image as ImageStyleWriter;
+use Shareforce\PhpWord\Element\Image as ImageElement;
+use Shareforce\PhpWord\Shared\XMLWriter;
+use Shareforce\PhpWord\Style\Font as FontStyle;
+use Shareforce\PhpWord\Style\Frame as FrameStyle;
+use Shareforce\PhpWord\Writer\Word2007\Style\Font as FontStyleWriter;
+use Shareforce\PhpWord\Writer\Word2007\Style\Image as ImageStyleWriter;
 
 /**
  * Image element writer
