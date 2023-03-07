@@ -34,6 +34,10 @@ class Field extends AbstractElement
      * @var array
      */
     protected $fieldsArray = array(
+        'DOCPROPERTY' => array(
+            'properties' => array('name' => ''),
+            'options' => array('PreserveFormat'),
+        ),
         'PAGE' => array(
            'properties' => array(
                'format' => array('Arabic', 'ArabicDash', 'alphabetic', 'ALPHABETIC', 'roman', 'ROMAN'),
