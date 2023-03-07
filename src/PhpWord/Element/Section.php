@@ -304,4 +304,17 @@ class Section extends AbstractContainer
 
         return $this->footers[1];
     }
+
+    /**
+     * Add element from another PHPWord
+     * @param AbstractElement $element
+     * @return void
+     */
+    public function pushElement(AbstractElement $element)
+    {
+        $element->setParentContainer($this);
+        $element->setElementIndex($this->countElements() + 1);
+        $element->setElementId();
+        $this->elements[] = $element;
+    }
 }
